@@ -313,7 +313,7 @@ function showMessage(header,message)
     content += '<div class="header-container"><div class="message-header">'+header+'</div></div>';
     content += '<div class="message-body">'+message+'</div></div>';
     $('#msg-div').html(content);
-    $('#msg-div').toggle('slow').delay(4000).toggle('slow');
+    $('#msg-div').toggle('slow').delay(6000).toggle('slow');
 }
 
 function closeIframe(pageId)
