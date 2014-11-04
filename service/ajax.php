@@ -536,7 +536,7 @@ function hideShowPage($cmd,$table,$pageId,$type)
                 
                 if($cmd=='hidePageInMenu' or $cmd == 'showPageInMenu') {
                     $values = array ('nav_hide' => $type, 'tstamp' => time());
-                } else if($cmd=='hidePage') {
+                } else if($cmd=='hidePage' or $cmd =='showPage') {
                     $values = array ('hidden' => $type, 'tstamp' => time());
                 }   
                 $res = $GLOBALS['TYPO3_DB']->exec_UPDATEquery($table, 'uid='.intval($pageId), $values) or die("289; ".mysql_error());

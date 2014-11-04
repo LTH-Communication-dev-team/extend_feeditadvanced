@@ -16,6 +16,10 @@ var resources = {
     "pageHidePageTooltip" : "Set the visibility of this page to hidden.",
     "pageShowPage" : "Show Page",
     "pageShowPageTooltip" : "Set the visibility of this page to display.",
+    "pageHidePageInMenu" : "Hide Page in Menu",
+    "pageHidePageInMenuTooltip" : "Hide this page in Menu.",
+    "pageShowPageInMenu" : "Show Page in Menu",
+    "pageShowPageInMenuTooltip" : "Show this page in Menu.",
     "editPanelPaste" : "Paste",
     "editPanelPasteTooltip" : "Paste element after existing element.",
     
@@ -44,5 +48,8 @@ var resources = {
     "showMessageCopyPageHeader" : "Copy",
     "showMessageCopyPageText" : "The page has succefully been copied.",
     "showMessageMovePageHeader" : "Move",
-    "showMessageMovePageText" : "The page has succefully been moved."
+    "showMessageMovePageText" : "The page has succefully been moved.",
+    "showMessageAddRightColumnHeader" : "New",
+    "showMessageAddRightColumnText" : "The column has succefully been created."    
+    
 };

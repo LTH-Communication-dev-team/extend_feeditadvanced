@@ -898,7 +898,7 @@ div.feEditAdvanced-contentWrapperSmall .start-grid-8 {
 
 .fancybox-close {
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 1185px;
     width: 36px;
     height: 36px;
@@ -908,13 +908,13 @@ div.feEditAdvanced-contentWrapperSmall .start-grid-8 {
 
 .help-button {
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 1155px;
     width: 36px;
     height: 36px;
     cursor: pointer;
     z-index: 8040;
-    background-image: url(typo3conf/extend_feeditadvanced/res/icons/help.png);
+    background-image: url(../icons/help.png);
     background-repeat: no-repeat;
 }
 

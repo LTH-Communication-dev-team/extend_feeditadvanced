@@ -93,7 +93,7 @@ and open the template in the editor.
         <title>Help</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../res/css/fe_edit_advanced.css" rel="stylesheet" type="text/css"/>
+        <link href="typo3conf/ext/extend_feeditadvanced/res/css/fe_edit_advanced.css" rel="stylesheet" type="text/css"/>
         <script language="javascript">
             var content = <?php echo "'" . urlencode($content) . "'"; ?>;
             

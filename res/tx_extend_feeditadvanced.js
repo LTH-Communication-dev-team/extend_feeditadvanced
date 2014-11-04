@@ -284,7 +284,7 @@ function ajax(cmd,table,uid,parentUid)
             console.log(status+error);
         },
         complete: function(data) {
-            console.log('complete'+data.table);
+            //console.log('complete'+data.table);
         },
         failure: function(errMsg) {
             console.log(errMsg);
@@ -551,6 +551,7 @@ function addRightColumn()
         $('#text_content_main').attr('class', '');
         $('#text_wrapper').attr('class', 'grid-15');
         $('#text_wrapper').after(content);
+        showMessage(resources.showMessageAddRightColumnHeader, resources.showMessageAddRightColumnText);
     }
     //toggleItem('.feEditAdvanced-pageItemsMenu');
 }
