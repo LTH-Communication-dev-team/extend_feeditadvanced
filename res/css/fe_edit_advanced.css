@@ -1,0 +1,1370 @@
+/**
+ * CSS for Advanced Frontend Editing (feeditadvanced)
+ *
+ * These styles are used when the menuBar is opened.
+ * Includes the styles for the drop zones, the hovermenu and the lightbox.
+ * For the lightbox also see lightbox.css.
+ *
+ * (Styles for the editing forms inside the lightbox are located in
+ * fe_formsOnPage.css)
+ */
+body {
+	margin-top: 68px;
+}
+
+div#feEditAdvanced-bodyattach {
+	behavior: url(typo3conf/ext/feeditadvanced/res/css/csshover3-source.htc);
+}
+
+div#feEditAdvanced-container img {
+	border: 0;
+	border-style: none;
+}
+
+div#typo3-previewInfo {
+	display: none;
+}
+
+/* ---------------------- MENUBAR, generic buttons for that etc ---------------------------- */
+div#feEditAdvanced-menuBar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	z-index: 8000;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 90%;
+        min-width: 992px;
+}
+
+div.feEditAdvanced-menuToolbar div.separatorBar, /* DIV Tag not namespaced; remove this line when checked */
+div.feEditAdvanced-menuToolbar div.feEditAdvanced-separatorBar {
+	display: block; /*opera*/
+	display: inline-block; /*ie*/
+	height: 24px;
+	border-left: 1px #888 solid;
+	margin-right: 6px;
+}
+
+div.feEditAdvanced-menuToolbar div.spacer, /* DIV Tag not namespaced; remove this line when checked */
+div.feEditAdvanced-menuToolbar div.feEditAdvanced-spacer {
+	display: block; /*opera*/
+	display: inline-block; /*ie*/
+	width: 20px;
+}
+
+
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow a.feEditAdvanced-smallButton,
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow div.feEditAdvanced-smallButton,
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow a.feEditAdvanced-button {
+	margin: 2px 10px 0 0;
+	padding: 0px 3px 0 0;
+	height: 26px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	background: url(../icons/menubar/button_right.png) no-repeat top right;
+	font-size: 12px;
+	display: block;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow .feEditAdvanced-button span.feEditAdvanced-buttonText {
+	padding: 7px 5px 0px 7px;
+	color: #c6c6c6;
+	height: 21px;
+	display: block;
+	background: url(../icons/menubar/button_left.png) no-repeat;
+	min-width: 75px;
+}
+
+div#feEditAdvanced-menuBar  #feEditAdvanced-showHiddenContent label {
+	color: #c6c6c6;
+	display: inline;
+	font-weight: normal;
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+}
+
+#feEditAdvanced-menuBar a.feEditAdvanced-button:hover,
+#feEditAdvanced-menuBar a.feEditAdvanced-smallButton:hover,
+div#feEditAdvanced-menuBar div.feEditAdvanced-smallButton:hover {
+	color: white;
+}
+
+div#feEditAdvanced-menuBar a.disabled, /* A Tag not namespaced; remove this line when checked */
+div#feEditAdvanced-menuBar a.feEditAdvanced-disabled {
+	color: #888;
+	cursor: default;
+}
+
+div#feEditAdvanced-menuBar a.disabled:hover, /* A Tag not namespaced; remove this line when checked */
+div#feEditAdvanced-menuBar a.feEditAdvanced-disabled:hover {
+	background-color: #ddd;
+}
+
+div#feEditAdvanced-menuBar a.feEditAdvanced-smallButton:hover {
+	color: #fff;
+}
+
+div#feEditAdvanced-menuBar div.feEditAdvanced-firstRow,
+div#feEditAdvanced-menuBar div.feEditAdvanced-secondRow {
+	clear: both;
+	overflow: hidden;
+	height: 34px;
+	width: 100%;
+}
+
+div#feEditAdvanced-menuBar div.feEditAdvanced-firstRow {
+	background: url(../icons/menubar/menu_back.png) repeat-x 0 0;
+}
+
+div#feEditAdvanced-menuBar div.feEditAdvanced-secondRow {
+	background: url(../icons/menubar/menu2_back.png) repeat-x 0 0;
+}
+
+div#feEditAdvanced-logo {
+	float: right;
+	padding: 0 15px;
+	position: absolute;
+	right: 0;
+	top: 39px;
+}
+
+div.feEditAdvanced-menuToolbar {
+	margin: 1px;
+	height: 32px;
+}
+
+/* ---------------------- Top Menu: Actions ---------------------------- */
+div#feEditAdvanced-actionToolbar {
+	margin-right: 20px;
+}
+
+/* ---------------------- Top Menu: Close Button on the right ---------------------------- */
+div#feEditAdvanced-contextToolbar {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+div#feEditAdvanced-menuBar div#feEditAdvanced-contextToolbar a.feEditAdvanced-button {
+	float: right;
+	display: block;
+}
+
+/* ---------------------- Top Menu: Page edit buttons on the left ---------------------------- */
+div#feEditAdvanced-menuBar div#feEditAdvanced-pageEditToolbar {
+	float: left;
+	width: 80%;
+}
+
+div#feEditAdvanced-menuBar div#feEditAdvanced-pageEditToolbar div.feEditAdvanced-allWrapper {
+	display: block;
+}
+
+div#feEditAdvanced-menuBar div#feEditAdvanced-pageEditToolbar a.feEditAdvanced-button {
+	float: left;
+	display: block;
+}
+
+div#feEditAdvanced-menuBar div#feEditAdvanced-pageEditToolbar div#feEditAdvanced-showHiddenContent {
+	float: left;
+	padding: 7px 0px 2px 10px;
+	color: #ddd;
+	font-size: 12px;
+}
+
+div#feEditAdvanced-menuBar div#feEditAdvanced-pageEditToolbar div#feEditAdvanced-showHiddenContent input#feEditAdvanced-showHiddenContent-input {
+	vertical-align: -2px;
+}
+
+/* ---------------------- Top Menu: List of Content Element Types ---------------------------- */
+div#feEditAdvanced-contentTypeToolbar {
+	z-index: 500;
+	overflow: visible;
+	float: left;
+	width: 80%;
+	margin-left: 20px;
+	height: 32px;
+	text-align: left;
+}
+
+div#feEditAdvanced-contentTypeToolbar-inner {
+	height: 32px;
+	overflow: hidden;
+	position: absolute;
+	left: 20px;
+	text-align: left;
+	z-index: 9200;
+}
+
+div#feEditAdvanced-contentTypeToolbar-scroller {
+	width: 2000px; /** needs to be an abnormal amount */
+}
+
+div#feEditAdvanced-contentTypeToolbar-arrLeft,
+div#feEditAdvanced-contentTypeToolbar-arrRight {
+	cursor: pointer;
+	width: 20px;
+	float: left;
+	color: #000;
+	font-weight: normal;
+	font-size: 20px;
+	z-index: 9500;
+	position: relative;
+	line-height: 31px;
+	text-align: center;
+	background: url(../icons/menubar/menu2_back.png) repeat-x 0 0;
+}
+
+div#feEditAdvanced-contentTypeToolbar-arrRight {
+	float: right;
+}
+
+img.feEditAdvanced-buttonImage {
+	vertical-align: middle;
+	float: left;
+	margin: 4px 0 0;
+}
+
+div#feEditAdvanced-contextToolbar img.feEditAdvanced-buttonImage {
+	margin: 11px 3px 0 6px;
+}
+
+div.x-dd-drag-proxy a.feEditAdvanced-contentTypeItem,
+div#feEditAdvanced-menuBar a.feEditAdvanced-contentTypeItem {
+	background: none;
+	width: auto;
+	margin: 0;
+	height: 32px;
+	padding: 0 6px;
+}
+
+div.x-dd-drag-proxy a.feEditAdvanced-button span,
+div#feEditAdvanced-menuBar div#feEditAdvanced-contentTypeToolbar a.feEditAdvanced-button span {
+	float: left;
+	line-height: 32px;
+	padding-left: 3px;
+}
+
+span.feEditAdvanced-buttonLabel {
+	color: #000;
+	margin-left: 3px;
+	font-size: 11px;
+	line-height: 32px;
+}
+
+div#feEditAdvanced-menuBar .feEditAdvanced-contentTypeItem {
+	border-right: 1px dotted #afafaf;
+}
+
+.feEditAdvanced-contentTypeItem {
+	display: block; /*opera*/
+	display: inline-block; /*ie*/
+	margin: 0;
+	text-decoration: none !important;
+	color: #ddd;
+	cursor: move;
+	padding: 0 10px;
+	height: 34px;
+}
+
+div.x-dd-drag-proxy {
+	background: #e0e0e0;
+	border: 1px dotted #999;
+}
+
+/* ---------------------- Top Menu: clipboard ---------------------------- */
+#feEditAdvanced-clipboardToolbar {
+	margin-right: 20px;
+	width: 180px;
+	height: 30px;
+	padding: 0 2px;
+	background: url(../icons/menubar/clipboard_back.png) no-repeat;
+}
+
+#feEditAdvanced-clipboardToolbar .clipObj {
+	display: block; /*opera*/
+	display: inline-block; /*ie*/
+	margin: 0;
+	text-decoration: none !important;
+	color: #ddd;
+	cursor: move;
+	padding: 0 10px;
+	height: 34px;
+	border-right: 1px dotted #afafaf;
+	background-color: #44a;
+}
+
+#feEditAdvanced-clipboardToolbar .clipContainer {
+	float: left;
+	width: 45px;
+	height: 32px;
+	margin: 0 6px 0 4px;
+}
+
+#feEditAdvanced-clipboardToolbar .clipObj {
+	width: 100%;
+	height: 24px;
+	font-size: 8px;
+	padding: 1px;
+	text-align: left;
+	overflow: hidden;
+}
+
+#feEditAdvanced-clipboardToolbar .clearBtn {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	left: 32px;
+	top: -8px;
+	overflow: visible;
+	background-image: url(../icons/menubar/remove.png);
+	z-index: 3 !important;
+}
+
+#feEditAdvanced-clipboardToolbar .clearBtn:hover {
+	background-color: #fcc;
+}
+
+.feEditAdvanced-notificationMsg {
+	position: fixed;
+	top: 5px;
+	left: 75%;
+	padding: 5px;
+	background: #aaa;
+	color: #222;
+	border: 1px solid #666;
+	z-index: 99999;
+}
+
+.feEditAdvanced-noBorder {
+	border: none !important;
+}
+
+/* ---------------------- DROP ZONE for Draggable ---------------------------- */
+.feEditAdvanced-dropzone {
+	width: 100%;
+	height: 40px;
+	margin: 10px 0;
+	border: 1px dashed #888;
+	background: #e0e0e0;
+}
+
+.feEditAdvanced-dropzoneText {
+	margin: 10px;
+	padding-left: 20px;
+	background: transparent url(../icons/hovermenu/drop.png) no-repeat;
+}
+
+.feEditAdvanced-dropzoneActive {
+	background: #FFFF30 !important;
+}
+
+dl.feEditAdvanced-menuUserlist {
+	font-size: 80%;
+	float: right;
+	margin-top: 5px;
+	margin-right: 160px;
+	width: auto;
+	overflow: hidden;
+}
+
+dl.feEditAdvanced-menuUserlist dt {
+	display: inline;
+	float: left;
+}
+
+dl.feEditAdvanced-menuUserlist dd {
+	display: inline;
+	float: left;
+	cursor: help;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 3px;
+}
+
+/* ---------------------- HOVERMENU ---------------------------- */
+div.feEditAdvanced-allWrapper,
+div.feEditAdvanced-contentWrapper {
+	position: relative;
+	padding: 4px;
+	margin: 20px 0 4px 0;
+	overflow: visible;
+	min-height: 0; /* Min height added for IE hasLayout issues. */
+}
+
+div.feEditAdvanced-allWrapper form {
+	min-height: 0;
+	margin: 0;
+}
+
+div.feEditAdvanced-allWrapper {
+	border: 1px dashed #bbb;
+	margin: 1px;
+	padding: 0;
+}
+
+div.feEditAdvanced-allWrapperHover {
+	background-image: url(../icons/hovermenu/content_background.png);
+	border: 1px solid #888;
+	margin: 1px;
+}
+
+/* Give IE6 a solid colored background since it can't handle PNG alpha transparency */
+* html div.feEditAdvanced-allWrapperHover {
+	background-image: none;
+	background-color: #e0e0e0 !important;
+}
+
+div.feEditAdvanced-clickContentToEdit {
+	cursor: pointer;
+}
+
+div.feEditAdvanced-contentWrapper {
+	margin: 0;
+	padding: 0;
+}
+
+div.feEditAdvanced-contentWrapper .formsOnPage {
+	background-color: white;
+}
+
+div.feEditAdvanced-allWrapper div.feEditAdvanced-editPanelDiv {
+	position: absolute;
+	top: -20px;
+	left: 0;
+	z-index: 85;
+	margin: -1px;
+	padding: 0;
+	background-color: #ccc;
+	color: #444;
+	width: 100%;
+	min-width: 400px;
+	height: 21px;
+	border: 1px solid #888;
+	border-bottom: 1px solid #aaa;
+	overflow: visible;
+	background: url(../icons/hovermenu/background.png) repeat-x;
+}
+
+div.feEditAdvanced-editPanelDiv a img,
+.formsOnPage a img,
+.formsOnPage img {
+	border-width: 0;
+}
+
+div.feEditAdvanced-contentWrapper div.feEditAdvanced-editPanelDiv {
+	position: static !important;
+}
+
+div.feEditAdvanced-contentWrapper .formsOnPage {
+	position: relative;
+	z-index: 400;
+}
+
+.feEditAdvanced-hiddenElement .feEditAdvanced-contentWrapper,
+.hidden .formsOnPage, .feEditAdvanced-hidden {
+	opacity: 0.5;
+	-ms-filter: "alpha(opacity=50)";
+}
+
+.feEditAdvanced-label,
+input.feEditAdvanced-editButton,
+.feEditAdvanced-dragHandle {
+	float: left !important;
+	padding: 2px 3px 0 22px;
+	margin: 2px 2px 0;
+	border: none;
+	border-right: 1px dotted #aaa;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #646;
+	width: auto;
+}
+
+div.feEditAdvanced-contentWrapperSmall input.feEditAdvanced-editButton {
+	width: 20px;
+	text-indent: 20px;
+	padding-left: 0;
+	padding-right: 0;
+	background-position: 0px 50%;
+}
+
+div.feEditAdvanced-contentWrapperSmall div.feEditAdvanced-editPanelDiv {
+	min-width: 170px;
+}
+
+.feEditAdvanced-label {
+	font-weight: bold;
+	padding-left: 0;
+}
+
+input.feEditAdvanced-editButton:hover,
+.feEditAdvanced-dragHandle:hover {
+	cursor: pointer;
+}
+
+input.feEditAdvanced-editButton.newRecordAction,
+input.feEditAdvanced-editButton.newPageAction {
+	background: url(../icons/hovermenu/new.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.editAction {
+	background: url(../icons/hovermenu/edit.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.cutAction {
+	background: url(../icons/hovermenu/cut.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.copyAction {
+	background: url(../icons/hovermenu/copy.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.pasteAction {
+	background: url(../icons/hovermenu/clip_pasteafter.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.hideAction {
+	background: url(../icons/hovermenu/hide.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.unhideAction {
+	background: url(../icons/hovermenu/unhide.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.deleteAction {
+	background: url(../icons/hovermenu/delete.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.dragAction,
+.feEditAdvanced-dragHandle {
+	background: url(../icons/hovermenu/drag.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.upAction {
+	background: url(../icons/hovermenu/up.png) no-repeat 3px 50%;
+}
+
+input.feEditAdvanced-editButton.downAction {
+	background: url(../icons/hovermenu/down.png) no-repeat 3px 50%;
+}
+
+.feEditAdvanced-dragHandle {
+	float: right !important;
+	border: none;
+	height: 16px;
+	padding: 2px 3px 0 25px;
+}
+
+.doCut {
+	background-color: #f8e0e0;
+}
+
+.doCopy {
+	background-color: #d8f0d8;
+}
+
+div.feEditAdvanced-contentWrapper form.typo3-editPanel {
+	float: right;
+	border-width: 0 !important;
+}
+
+/* ---------------------- LIGHT BOX ---------------------------- */
+#feEditAdvanced-editWindow {
+	display: block;
+	position: fixed;
+	margin: 0;
+	padding: 0 10px;
+	top: 100px;
+	min-width: 200px;
+	min-height: 200px;
+	color: #333;
+	background-image: url(../icons/forms/back_opacity.png);
+	text-align: left;
+	z-index: 10000 !important;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#feEditAdvanced-loading {
+	text-align: center;
+	color: white;
+	padding: 40px;
+	background: url('../icons/spinner.gif') center center no-repeat;
+	min-width: 200px;
+	max-width: 300px;
+}
+
+#feEditAdvanced-loading h3 {
+	color: white;
+}
+
+#feEditAdvanced-editWindowHeader {
+	color: white;
+	font-size: 14px;
+	padding: 10px 0;
+}
+
+#feEditAdvanced-editWindowContent {
+	background-color: #FFF;
+	margin: 2px;
+	padding-bottom: 10px;
+	overflow: auto;
+	min-width: 555px;
+}
+
+.feEditAdvanced-editControls {
+	width: 100%;
+	height: 50px;
+}
+
+#feEditAdvanced-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3420px;
+	z-index: 9000;
+	background-color: #000;
+
+	-moz-opacity: 0.5;
+	opacity: .50;
+	filter: alpha(opacity = 50);
+}
+
+/*----------------- IE6 SPECIFIC STUFF ------------------*/
+* html #feEditAdvanced-menuBar {
+	position: absolute;
+}
+
+* html #feEditAdvanced-editWindow {
+	position: absolute;
+}
+
+* html #feEditAdvanced-contextToolbar {
+	position: absolute;
+}
+
+* html #feEditAdvanced-overlay {
+	position: absolute;
+}
+
+#feEditAdvanced-menuBar div.feEditAdvanced-editPanelDiv {
+	background: none;
+	border: none;
+	min-width: 0;
+	position: static;
+}
+
+#feEditAdvanced-menuBar div.feEditAdvanced-allWrapper {
+	border: none;
+	margin-left: 12px;
+}
+
+/*------------------Modified-----------------------------------------------*/
+body {
+	margin-top: 34px;
+}
+
+div#feEditAdvanced-menuBar div#feEditAdvanced-pageEditToolbar {
+	float: left;
+	width: 100%;
+}
+
+.typo3-message .message-header {
+	display: block;
+        font-weight: bold;
+}
+
+.typo3-message .t3-icon-actions-message-close {
+	cursor: pointer;
+	float: right;
+}
+
+.t3-icon-actions {
+	background-image: url('../icons/t3skin.png') !important;
+	height: 16px;
+	width: 16px;
+}
+
+.t3-icon-message-ok-close {
+	background-position: -162px -36px !important;
+
+}
+
+.typo3-message {
+	background-position: 1.2em 1.8em;
+	background-repeat: no-repeat;
+	border: 1px solid;
+	color: #9e7d4a;
+	padding: 1.5em 1.5em 1em 3.5em;
+}
+
+.message-ok {
+	color: #3b7826;
+	background-color: #cdeaca;
+	background-image: url('../icons/gfx/ok.png');
+	border-color: #58b548;
+        position: absolute;
+        z-index: 15000;
+        top: 34px;
+}
+
+.message-ok a {
+	color: #3b7826;
+}
+
+/*-------------------Extend specific---------------------------------*/
+
+.user-menu-wrapper {
+    float:left;
+    display: block;
+    cursor: pointer;
+}
+
+.user_menu {
+    width: 75px;
+    height: 20px;
+    display: block;
+    padding: 7px 5px 0px 30px;
+    font-size: 12px;
+    color: #ffffff;
+    margin-left:15px;
+    
+    background:url(/typo3conf/ext/extend_feeditadvanced/res/icons/menubar/usericon.png) no-repeat;
+    background-position: 10px;
+}
+
+.extend_feEditAdvanced_menuDown {
+    background:url(/typo3conf/ext/extend_feeditadvanced/res/icons/menubar/menudownicon.png) no-repeat;
+    background-position: 10px;
+}
+
+#ux-lightbox-wrapper {
+    background-color:#ffffff;
+    width: 1210px !important;
+}
+
+#ux-lightbox-header h3 {
+    color:black;
+    font-weight:bold;
+}
+
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow a.feEditAdvanced-smallButton,
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow div.feEditAdvanced-smallButton,
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow a.feEditAdvanced-button {
+	margin: 2px 10px 0 0;
+	padding: 0px 3px 0 0;
+	height: 26px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	background: none;
+	font-size: 12px;
+	display: block;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+div#feEditAdvanced-menuBar .feEditAdvanced-firstRow .feEditAdvanced-button span.feEditAdvanced-buttonText {
+	padding: 7px 5px 0px 7px;
+	color: #ffffff;
+	height: 21px;
+	display: block;
+	background: none;
+	min-width: 75px;
+}
+
+div#feEditAdvanced-menuBar  #feEditAdvanced-showHiddenContent label {
+	color: #ffffff;
+	display: inline;
+	font-weight: normal;
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+}
+
+div.feEditAdvanced-contentWrapperSmall .start-grid-8 {
+    float: none;
+    display:inline-block !important;
+}
+
+.extend_feEditAdvanced_editButton {
+    margin-bottom:10px;   
+}
+
+.extend_feEditAdvanced-buttonText {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.feEditAdvanced-newItemsMenu, .feEditAdvanced-userItemsMenu, .feEditAdvanced-pageItemsMenu, .feEditAdvanced-displayItemsMenu, .feEditAdvanced-toolItemsMenu {
+    width: 170px;
+    background-color: #000000;
+    position: absolute;
+    display: none;
+    z-index:10000;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    margin-left: -17px;
+}
+
+.feEditAdvanced-displayItemsMenu {
+    width: 250px;
+}
+
+.userMenuDropdown {
+    display: none;
+    background-color: #000000;
+}
+
+.user-menu-outer-wrapper {
+    float:left;
+    background: url(../icons/menubar/menudownicon.png) no-repeat;
+    background-position: 10px 30px;
+}
+
+.extend_feeditadvanced_top_menu li {
+    float:left;
+}
+
+.feEditAdvanced-newItemsMenu li, .feEditAdvanced-userItemsMenu li, .feEditAdvanced-pageItemsMenu li, .feEditAdvanced-displayItemsMenu li, .feEditAdvanced-toolItemsMenu li {
+    clear: both;
+    margin-top: 10px;
+}
+
+.feEditAdvanced-menuToolbar ul {
+    list-style-type: none;
+}
+
+.extend_feeditadvanced_top_menu {
+    z-index:10700;
+}
+
+.extend_feeditadvanced_top_menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#extend_feeditadvanced_top_menu_new {
+   
+}
+
+#extend_feeditadvanced_top_menu_user {
+    float:right;
+    margin-right:30px;
+}
+
+#extend_feeditadvanced_top_logo {
+    background: url(../icons/typo3-white-200px-transparent.png) no-repeat;
+    float:right;
+    margin-right:30px;
+    /*background-position: 10px 30px;*/
+    width: 60px;
+    height: 17px;
+}
+
+.extend_feeditadvanced_top_logo {
+    width: 60px;
+    height: 17px;
+    
+}
+
+.feEditAdvanced-secondRow-wrap {
+    display: none;
+}
+
+#extend_feeditadvanced_create_news {
+    display:none;
+}
+
+.top_menu_item {
+    margin-left:30px;
+    font-size: 12px;
+}
+
+.fancybox-close {
+	position: absolute;
+	top: 20px;
+	left: 1190px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 8040;
+}
+
+#msg-div {
+    display: none;
+}
+
+.feEditAdvanced-invisibleElement, .feEditAdvanced-invisible {
+    display:none;
+}
+
+/********************************************** JQUERY DIALOG **********************************/
+/*.ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, .foo, .ui-draggable, .ui-resizable {background:#cccccc !important}​*/
+
+/************************************************** Glyphicons */
+[class^="icon-"],
+[class*=" icon-"],
+[class^="icon-white-"],
+[class*=" icon-white-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  /*margin-right: .3em;*/
+  margin-left: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+      background-image: url("../icons/glyphicons-halflings.png");
+}
+[class^="icon-white-"],
+[class*=" icon-white-"] {
+      background-image: url("../icons/glyphicons-halflings-white.png");
+}
+
+.icon-glass, .icon-white-glass {
+  background-position: 0      0;
+}
+.icon-music, .icon-white-music {
+  background-position: -24px 0;
+}
+.icon-search, .icon-white-search {
+  background-position: -48px 0;
+}
+.icon-envelope, .icon-white-envelope {
+  background-position: -72px 0;
+}
+.icon-heart, .icon-white-heart {
+  background-position: -96px 0;
+}
+.icon-star, .icon-white-star {
+  background-position: -120px 0;
+}
+.icon-star-empty, .icon-white-star-empty {
+  background-position: -144px 0;
+}
+.icon-user, .icon-white-user {
+  background-position: -168px 0;
+}
+.icon-film, .icon-white-film {
+  background-position: -192px 0;
+}
+.icon-th-large, .icon-white-th-large {
+  background-position: -216px 0;
+}
+.icon-th, .icon-white-th {
+  background-position: -240px 0;
+}
+.icon-th-list, .icon-white-th-list {
+  background-position: -264px 0;
+}
+.icon-ok, .icon-white-ok {
+  background-position: -288px 0;
+}
+.icon-remove, .icon-white-remove {
+  background-position: -312px 0;
+}
+.icon-zoom-in, .icon-white-zoom-in {
+  background-position: -336px 0;
+}
+.icon-zoom-out, .icon-white-zoom-out {
+  background-position: -360px 0;
+}
+.icon-off, .icon-white-off {
+  background-position: -384px 0;
+}
+.icon-signal, .icon-white-signal {
+  background-position: -408px 0;
+}
+.icon-cog, .icon-white-cog {
+  background-position: -432px 0;
+}
+.icon-trash, .icon-white-trash {
+  background-position: -456px 0;
+}
+.icon-home, .icon-white-home {
+  background-position: 0 -24px;
+}
+.icon-file, .icon-white-file {
+  background-position: -24px -24px;
+}
+.icon-time, .icon-white-time {
+  background-position: -48px -24px;
+}
+.icon-road, .icon-white-road {
+  background-position: -72px -24px;
+}
+.icon-download-alt, .icon-white-download-alt {
+  background-position: -96px -24px;
+}
+.icon-download, .icon-white-download {
+  background-position: -120px -24px;
+}
+.icon-upload, .icon-white-upload {
+  background-position: -144px -24px;
+}
+.icon-inbox, .icon-white-inbox {
+  background-position: -168px -24px;
+}
+.icon-play-circle, .icon-white-play-circle {
+  background-position: -192px -24px;
+}
+.icon-repeat, .icon-white-repeat {
+  background-position: -216px -24px;
+}
+.icon-refresh, .icon-white-refresh {
+  background-position: -240px -24px;
+}
+.icon-list-alt, .icon-white-list-alt {
+  background-position: -264px -24px;
+}
+.icon-lock, .icon-white-lock {
+  background-position: -287px -24px;
+}
+.icon-flag, .icon-white-flag {
+  background-position: -312px -24px;
+}
+.icon-headphones, .icon-white-headphones {
+  background-position: -336px -24px;
+}
+.icon-volume-off, .icon-white-volume-off {
+  background-position: -360px -24px;
+}
+.icon-volume-down, .icon-white-volume-down {
+  background-position: -384px -24px;
+}
+.icon-volume-up, .icon-white-volume-up {
+  background-position: -408px -24px;
+}
+.icon-qrcode, .icon-white-qrcode {
+  background-position: -432px -24px;
+}
+.icon-barcode, .icon-white-barcode {
+  background-position: -456px -24px;
+}
+.icon-tag, .icon-white-tag {
+  background-position: 0 -48px;
+}
+.icon-tags, .icon-white-tags {
+  background-position: -25px -48px;
+}
+.icon-book, .icon-white-book {
+  background-position: -48px -48px;
+}
+.icon-bookmark, .icon-white-bookmark {
+  background-position: -72px -48px;
+}
+.icon-print, .icon-white-print {
+  background-position: -96px -48px;
+}
+.icon-camera, .icon-white-camera {
+  background-position: -120px -48px;
+}
+.icon-font, .icon-white-font {
+  background-position: -144px -48px;
+}
+.icon-bold, .icon-white-bold {
+  background-position: -167px -48px;
+}
+.icon-italic, .icon-white-italic {
+  background-position: -192px -48px;
+}
+.icon-text-height, .icon-white-text-height {
+  background-position: -216px -48px;
+}
+.icon-text-width, .icon-white-text-width {
+  background-position: -240px -48px;
+}
+.icon-align-left, .icon-white-align-left {
+  background-position: -264px -48px;
+}
+.icon-align-center, .icon-white-align-center {
+  background-position: -288px -48px;
+}
+.icon-align-right, .icon-white-align-right {
+  background-position: -312px -48px;
+}
+.icon-align-justify, .icon-white-align-justify {
+  background-position: -336px -48px;
+}
+.icon-list, .icon-white-list {
+  background-position: -360px -48px;
+}
+.icon-indent-left, .icon-white-indent-left {
+  background-position: -384px -48px;
+}
+.icon-indent-right, .icon-white-indent-right {
+  background-position: -408px -48px;
+}
+.icon-facetime-video, .icon-white-facetime-video {
+  background-position: -432px -48px;
+}
+.icon-picture, .icon-white-picture {
+  background-position: -456px -48px;
+}
+.icon-pencil, .icon-white-pencil {
+  background-position: 0 -72px;
+}
+.icon-map-marker, .icon-white-map-marker {
+  background-position: -24px -72px;
+}
+.icon-adjust, .icon-white-adjust {
+  background-position: -48px -72px;
+}
+.icon-tint, .icon-white-tint {
+  background-position: -72px -72px;
+}
+.icon-edit, .icon-white-edit {
+  background-position: -96px -72px;
+}
+.icon-share, .icon-white-share {
+  background-position: -120px -72px;
+}
+.icon-check, .icon-white-check {
+  background-position: -144px -72px;
+}
+.icon-move, .icon-white-move {
+  background-position: -168px -72px;
+}
+.icon-step-backward, .icon-white-step-backward {
+  background-position: -192px -72px;
+}
+.icon-fast-backward, .icon-white-fast-backward {
+  background-position: -216px -72px;
+}
+.icon-backward, .icon-white-backward {
+  background-position: -240px -72px;
+}
+.icon-play, .icon-white-play {
+  background-position: -264px -72px;
+}
+.icon-pause, .icon-white-pause {
+  background-position: -288px -72px;
+}
+.icon-stop, .icon-white-stop {
+  background-position: -312px -72px;
+}
+.icon-forward, .icon-white-forward {
+  background-position: -336px -72px;
+}
+.icon-fast-forward, .icon-white-fast-forward {
+  background-position: -360px -72px;
+}
+.icon-step-forward, .icon-white-step-forward {
+  background-position: -384px -72px;
+}
+.icon-eject, .icon-white-eject {
+  background-position: -408px -72px;
+}
+.icon-chevron-left, .icon-white-chevron-left {
+  background-position: -432px -72px;
+}
+.icon-chevron-right, .icon-white-chevron-right {
+  background-position: -456px -72px;
+}
+.icon-plus-sign, .icon-white-plus-sign {
+  background-position: 0 -96px;
+}
+.icon-minus-sign, .icon-white-minus-sign {
+  background-position: -24px -96px;
+}
+.icon-remove-sign, .icon-white-remove-sign {
+  background-position: -48px -96px;
+}
+.icon-ok-sign, .icon-white-ok-sign {
+  background-position: -72px -96px;
+}
+.icon-question-sign, .icon-white-question-sign {
+  background-position: -96px -96px;
+}
+.icon-info-sign, .icon-white-info-sign {
+  background-position: -120px -96px;
+}
+.icon-screenshot, .icon-white-screenshot {
+  background-position: -144px -96px;
+}
+.icon-remove-circle, .icon-white-remove-circle {
+  background-position: -168px -96px;
+}
+.icon-ok-circle, .icon-white-ok-circle {
+  background-position: -192px -96px;
+}
+.icon-ban-circle, .icon-white-ban-circle {
+  background-position: -216px -96px;
+}
+.icon-arrow-left, .icon-white-arrow-left {
+  background-position: -240px -96px;
+}
+.icon-arrow-right, .icon-white-arrow-right {
+  background-position: -264px -96px;
+}
+.icon-arrow-up, .icon-white-arrow-up {
+  background-position: -289px -96px;
+}
+.icon-arrow-down, .icon-white-arrow-down {
+  background-position: -312px -96px;
+}
+.icon-share-alt, .icon-white-share-alt {
+  background-position: -336px -96px;
+}
+.icon-resize-full, .icon-white-resize-full {
+  background-position: -360px -96px;
+}
+.icon-resize-small, .icon-white-resize-small {
+  background-position: -384px -96px;
+}
+.icon-plus, .icon-white-plus {
+  background-position: -408px -96px;
+}
+.icon-minus, .icon-white-minus {
+  background-position: -433px -96px;
+}
+.icon-asterisk, .icon-white-asterisk {
+  background-position: -456px -96px;
+}
+.icon-exclamation-sign, .icon-white-exclamation-sign {
+  background-position: 0 -120px;
+}
+.icon-gift, .icon-white-gift {
+  background-position: -24px -120px;
+}
+.icon-leaf, .icon-white-leaf {
+  background-position: -48px -120px;
+}
+.icon-fire, .icon-white-fire {
+  background-position: -72px -120px;
+}
+.icon-eye-open, .icon-white-eye-open {
+  background-position: -96px -120px;
+}
+.icon-eye-close, .icon-white-eye-close {
+  background-position: -120px -120px;
+}
+.icon-warning-sign, .icon-white-warning-sign {
+  background-position: -144px -120px;
+}
+.icon-plane, .icon-white-plane {
+  background-position: -168px -120px;
+}
+.icon-calendar, .icon-white-calendar {
+  background-position: -192px -120px;
+}
+.icon-random, .icon-white-random {
+  background-position: -216px -120px;
+  width: 16px;
+}
+.icon-comment {
+  background-position: -240px -120px;
+}
+.icon-magnet {
+  background-position: -264px -120px;
+}
+.icon-chevron-up {
+  background-position: -288px -120px;
+}
+.icon-chevron-down {
+  background-position: -313px -119px;
+}
+.icon-retweet {
+  background-position: -336px -120px;
+}
+.icon-shopping-cart {
+  background-position: -360px -120px;
+}
+.icon-folder-close {
+  background-position: -384px -120px;
+  width: 16px;
+  width: 16px;
+}
+.icon-folder-open {
+  background-position: -408px -120px;
+  background-position: -408px -120px;
+  width: 16px;
+}
+.icon-resize-vertical, .icon-white-resize-vertical {
+  background-position: -432px -119px;
+}
+.icon-resize-horizontal, .icon-white-resize-horizontal {
+  background-position: -456px -118px;
+}
+.icon-hdd, .icon-white-hdd {
+  background-position: 0 -144px;
+}
+.icon-bullhorn, .icon-white-bullhorn {
+  background-position: -24px -144px;
+}
+.icon-bell, .icon-white-bell {
+  background-position: -48px -144px;
+}
+.icon-certificate, .icon-white-certificate {
+  background-position: -72px -144px;
+}
+.icon-thumbs-up, .icon-white-thumbs-up {
+  background-position: -96px -144px;
+}
+.icon-thumbs-down, .icon-white-thumbs-down {
+  background-position: -120px -144px;
+}
+.icon-hand-right, .icon-white-hand-right {
+  background-position: -144px -144px;
+}
+.icon-hand-left, .icon-white-hand-left {
+  background-position: -168px -144px;
+}
+.icon-hand-up, .icon-white-hand-up {
+  background-position: -192px -144px;
+}
+.icon-hand-down, .icon-white-hand-down {
+  background-position: -216px -144px;
+}
+.icon-circle-arrow-right, .icon-white-circle-arrow-right {
+  background-position: -240px -144px;
+}
+.icon-circle-arrow-left, .icon-white-circle-arrow-left {
+  background-position: -264px -144px;
+}
+.icon-circle-arrow-up, .icon-white-circle-arrow-up {
+  background-position: -288px -144px;
+}
+.icon-circle-arrow-down, .icon-white-circle-arrow-down {
+  background-position: -312px -144px;
+}
+.icon-globe, .icon-white-globe {
+  background-position: -336px -144px;
+}
+.icon-wrench, .icon-white-wrench {
+  background-position: -360px -144px;
+}
+.icon-tasks, .icon-white-tasks {
+  background-position: -384px -144px;
+}
+.icon-filter, .icon-white-filter {
+  background-position: -408px -144px;
+}
+.icon-briefcase, .icon-white-briefcase {
+  background-position: -432px -144px;
+}
+.icon-fullscreen, .icon-white-fullscreen {
+  background-position: -456px -144px;
+}

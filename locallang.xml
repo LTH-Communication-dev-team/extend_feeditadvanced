@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<data type="array">
+		<languageKey index="default" type="array">
+                        <label index="page">Edit</label>
+			<label index="pageTooltip">Edit, move or delete the current page. Insert right column.</label>
+			<label index="pageEditPage">Edit Page Properties</label>
+			<label index="pageEditPageTooltip">Edit page properties of the current page.</label>
+                        <label index="pageMovePage">Move Page</label>
+			<label index="pageMovePageTooltip">Move the current page.</label>
+                        <label index="pageCopyPage">Copy page</label>
+			<label index="pageCopyPageTooltip">Copy the current page.</label>
+                        <label index="pageDeletePage">Delete Page</label>
+			<label index="pageDeletePageTooltip">Delete the current page.</label>
+                        <label index="pageHidePage">Hide Page</label>
+			<label index="pageHidePageTooltip">Set the visibility of this page to hidden.</label>
+                        <label index="pageShowPage">Show Page</label>
+			<label index="pageShowPageTooltip">Set the visibility of this page to display.</label>
+                        <label index="pageHidePageInMenu">Hide Page in Menu</label>
+			<label index="pageHidePageInMenuTooltip">Set the visibility in menu of this page to hidden.</label>
+                        <label index="pageShowPageInMenu">Show Page in Menu</label>
+			<label index="pageShowPageInMenuTooltip">Set the visibility in menu of this page to display.</label>
+                         
+                        <label index="new">New</label>
+			<label index="newTooltip">Create new page, content element or news item.</label>
+			<label index="newPage">New Page</label>
+			<label index="newPageTooltip">Create a new page as subpage to the current page.</label>
+                        <label index="newContent">New Content Element</label>
+			<label index="newContentTooltip">Create a new content element on the current page.</label>
+                        <label index="newNews">New News Item</label>
+			<label index="newNewsTooltip">Create a new news item.</label>
+                        <label index="newInsertRightColumn">Insert Right Column</label>
+			<label index="newInsertRightColumnTooltip">Insert right column.</label>
+                        
+                        <label index="tool">Tools</label>
+                        <label index="toolTooltip">Open File Manager and FormAdmin.</label>
+                        <label index="toolFileManager">File Manager</label>
+                        <label index="toolFileManagerTooltip">Open the Typo3 File Manager.</label>
+                        <label index="toolMailFormManager">Form Handler Manager</label>
+                        <label index="toolMailFormManagerTooltip">Open the Form Handler Manager.</label>
+                                                
+                        <label index="displayTooltip">Display.</label>
+                        <label index="display">Display</label>
+                        <label index="displayHiddenContentTooltip">Display hidden content elements.</label>
+                        <label index="displayHiddenContent">Display hidden Content elements</label>
+                        <label index="displayHiddenInMenuTooltip">Display pages hidden in menu.</label>
+                        <label index="displayHiddenInMenu">Display sidor hidden in menu</label>
+                        <label index="displayHiddenPageTooltip">Display hidden pages.</label>
+                        <label index="displayHiddenPage">Display hidden pages</label>
+                        
+                        <label index="help">Help</label>
+			<label index="helpTooltip">Display help.</label>
+                        
+                        <label index="userTooltip">Edit user settings, open Typo3 Backend or log out.</label>
+                        <label index="userSettings">User Settings</label>
+			<label index="userSettingsTooltip">Edit user settings.</label>
+                        <label index="userBackend">Open Typo3 Backend</label>
+			<label index="userBackendTooltip">Open Typo3 Backend.</label>
+                        <label index="userLogout">Log Out</label>
+			<label index="userLogoutTooltip">Log out from the front end edit tool.</label>
+                        
+                        <label index="paste">Paste</label>
+                        <label index="pasteTooltip">Paste.</label>
+                        <label index="copyIcon">Copy</label>
+			<label index="copyTitle">Copy element.</label>
+			<label index="cutIcon">Cut</label>
+			<label index="cutTitle">cut this element.</label>
+			<label index="deleteIcon">Delete</label>
+			<label index="deleteTitle">Delete this element.</label>
+			<label index="downIcon">Down</label>
+			<label index="downTitle">Move this down.</label>
+			<label index="editIcon">Edit</label>
+			<label index="editTitle">Edit this element by clicking on it.</label>
+			<label index="hideIcon">Hide</label>
+			<label index="hideTitle">Hide this element.</label>
+                        <label index="newPageIcon">New Page</label>
+			<label index="newRecordIcon">New</label>
+			<label index="newRecordInTopOfColumnTitle">New content in top of this column.</label>
+			<label index="newRecordTitle">New content after this element.</label>
+                        <label index="pasteIcon">Paste</label>
+			<label index="pasteTitle">Paste element after existing element.</label>
+			<label index="unhideIcon">Show</label>
+			<label index="unhideTitle">Show this hidden element.</label>
+			<label index="dragIcon">Drag</label>
+			<label index="dragTitle">Click to drag this element.</label>
+			<label index="upIcon">Up</label>
+			<label index="upTitle">Move this up.</label>
+                        
+                        <label index="saveButton">Save</label>
+			<label index="saveCloseButton">Save &amp; Close</label>
+			<label index="closeButton">Close</label>
+                        
+                        <label index="js.dropMessage">Drop content here</label>
+			<label index="js.loadingMessage">Loading editing form</label>
+			<label index="js.ajaxError">AJAX Error</label>
+			<label index="js.generalError">It looks like we encountered some problems. Please reload the page and try again or contact your administrator.</label>
+			<label index="js.alreadyProcessingAction">Already processing an action, please wait.</label>
+			<label index="js.newContentElement">New Content Element</label>
+			<label index="js.newPage">New Page</label>
+			<label index="js.editContentElement">Edit Content Element</label>
+			<label index="js.editPageProperties">Edit Page Properties</label>
+			<label index="js.confirmDelete">Are you sure you want to delete this content??</label>
+			<label index="js.hideNotification">Hiding content</label>
+			<label index="js.unhideNotification">Unhiding content</label>
+			<label index="js.moveNotification">Moving content</label>
+			<label index="js.saveNotification">Saving content</label>
+			<label index="js.closeNotification">Closing editing form</label>
+			<label index="js.copyNotification">Copying content</label>
+			<label index="js.cutNotification">Cutting content</label>
+			<label index="js.pasteNotification">Pasting content</label>
+			<label index="js.updatingContent">Updating content</label>
+
+		</languageKey>
+                
+                <languageKey index="sv" type="array">
+                        <label index="page">Ändra</label>
+			<label index="pageTooltip">Ändra, flytta eller radera sidan.</label>
+			<label index="pageEditPage">Ändra sidans egenskaper</label>
+			<label index="pageEditPageTooltip">Ändra sidans egenskaper.</label>
+                        <label index="pageMovePage">Flytta sidan</label>
+			<label index="pageMovePageTooltip">Flytta sidan.</label>
+                        <label index="pageCopyPage">Kopiera sidan</label>
+			<label index="pageCopyPageTooltip">Kopiera sidan.</label>
+                        <label index="pageDeletePage">Radera sidan</label>
+			<label index="pageDeletePageTooltip">Radera sidan.</label>
+                        <label index="pageHidePage">Göm sidan</label>
+			<label index="pageHidePageTooltip">Göm sidan.</label>
+                        <label index="pageShowPage">Visa sidan</label>
+			<label index="pageShowPageTooltip">Visa sidan.</label>
+                        <label index="pageHidePageInMenu">Göm sidan i menyn</label>
+                        <label index="pageHidePageInMenuTooltip">Göm denna sida i menyn.</label>
+                        <label index="pageShowPageInMenu">Visa sidan i menyn</label>
+                        <label index="pageShowPageInMenuTooltip">"Visa denna sida i menyn.</label>
+                         
+                        <label index="new">Lägg till</label>
+			<label index="newTooltip">Skapa ny sida, innehållselement eller nyhet.</label>
+			<label index="newPage">Ny sida</label>
+			<label index="newPageTooltip">Skapa en ny sida som undersida till den befintliga sidan.</label>
+                        <label index="newContent">Nytt innehållselement</label>
+			<label index="newContentTooltip">Skapa ett nytt innehållselement på den befintliga sida.</label>
+                        <label index="newNews">Skapa nyhet</label>
+			<label index="newNewsTooltip">Skapa en ny nyhet.</label>
+                        <label index="newInsertRightColumn">Infoga högerkolumn</label>
+			<label index="newInsertRightColumnTooltip">Infoga högerkolumn.</label>
+                        
+                        <label index="tool">Verktyg</label>
+                        <label index="toolTooltip">>Öppna Typo3s filhanterare och Form-Handler-Manager</label>
+                        <label index="toolFileManager">Filhanterare</label>
+                        <label index="toolFileManagerTooltip">Öppna Typo3s filhanterare.</label>
+                        <label index="toolMailFormManager">Form-Handler-Manager</label>
+                        <label index="toolMailFormManagerTooltip">Öppna Typo3s filhanterare.</label>
+                        
+                        <label index="displayTooltip">Visa.</label>
+                        <label index="display">Visa</label>
+                        <label index="displayHiddenContentTooltip">Visa gömda innehållselement.</label>
+                        <label index="displayHiddenContent">Visa gömda innehållselement</label>
+                        <label index="displayHiddenInMenuTooltip">Visa sidor gömda i meny.</label>
+                        <label index="displayHiddenInMenu">Visa sidor gömda i meny</label>
+                        <label index="displayHiddenPageTooltip">Visa gömda sidor.</label>
+                        <label index="displayHiddenPage">Visa gömda sidor</label>
+                                                
+                        <label index="help">Hjälp</label>
+			<label index="helpTooltip">Visa hjälp.</label>
+                        
+                        <label index="userTooltip">Ändra användarinställningar, öppna Typo3 Backend eller logga ut.</label>
+                        <label index="userSettings">Användarinställningar</label>
+			<label index="userSettingsTooltip">Ändra användarinställningar.</label>
+                        <label index="userBackend">Öppna Typo3 Backend</label>
+			<label index="userBackendTooltip">Öppna Typo3 Backend.</label>
+                        <label index="userLogout">Logga ut</label>
+			<label index="userLogoutTooltip">Logga ut från editeringsverktyget.</label>
+
+                        <label index="paste">Klistra in</label>
+                        <label index="pasteTooltip">Klistra in.</label>
+                        <label index="copyIcon">Kopiera</label>
+			<label index="copyTitle">Kopiera element.</label>
+			<label index="cutIcon">Klipp ut</label>
+			<label index="cutTitle">Klipp ut detta element.</label>
+			<label index="deleteIcon">Radera</label>
+			<label index="deleteTitle">Radera detta element.</label>
+			<label index="downIcon">Ned</label>
+			<label index="downTitle">Flytta detta ned.</label>
+			<label index="editIcon">Ändra</label>
+			<label index="editTitle">Ändra detta element genom att klicka på det.</label>
+			<label index="hideIcon">Göm</label>
+			<label index="hideTitle">Göm detta element.</label>
+                        <label index="newPageIcon">Ny sida</label>
+			<label index="newRecordIcon">Nytt</label>
+			<label index="newRecordInTopOfColumnTitle">Nytt innehållselement.</label>
+			<label index="newRecordTitle">Nytt innehåll efter detta element.</label>
+                        <label index="pasteIcon">Kliistra in</label>
+			<label index="pasteTitle">Klistra in element efter existerande element.</label>
+			<label index="unhideIcon">Visa</label>
+			<label index="unhideTitle">Visa detta gömda element.</label>
+			<label index="dragIcon">Dra</label>
+			<label index="dragTitle">Klicka för att dra detta element.</label>
+			<label index="upIcon">Upp</label>
+			<label index="upTitle">Flytta detta up.</label>
+                        
+                        <label index="saveButton">Spara</label>
+			<label index="saveCloseButton">Spara &amp; Stäng</label>
+			<label index="closeButton">Stäng</label>
+                        
+                        <label index="js.dropMessage">Släpp innehållet här</label>
+			<label index="js.loadingMessage">Loading editing form</label>
+			<label index="js.ajaxError">AJAX Error</label>
+			<label index="js.generalError">It looks like we encountered some problems. Please reload the page and try again or contact your administrator.</label>
+			<label index="js.alreadyProcessingAction">Already processing an action, please wait.</label>
+			<label index="js.newContentElement">New Content Element</label>
+			<label index="js.newPage">New Page</label>
+			<label index="js.editContentElement">Edit Content Element</label>
+			<label index="js.editPageProperties">Edit Page Properties</label>
+			<label index="js.confirmDelete">Are you sure you want to delete this content??</label>
+			<label index="js.hideNotification">Hiding content</label>
+			<label index="js.unhideNotification">Unhiding content</label>
+			<label index="js.moveNotification">Moving content</label>
+			<label index="js.saveNotification">Saving content</label>
+			<label index="js.closeNotification">Closing editing form</label>
+			<label index="js.copyNotification">Copying content</label>
+			<label index="js.cutNotification">Cutting content</label>
+			<label index="js.pasteNotification">Pasting content</label>
+			<label index="js.updatingContent">Updating content</label>
+              
+		</languageKey>
+	</data>
+</T3locallang>
