@@ -3,6 +3,7 @@ $lang = '';
 $content = '';
 $menuContent ='';
 $lang = $_GET['lang'];
+
 if($lang != 'sv') {
     $lang='en';
 }
@@ -57,7 +58,6 @@ $menuArray[15]['content']['sv'] = 'Delete content,add_new_page.html';
 $menuArray[16]['head']['sv'] = 'News';
 $menuArray[17]['content']['sv'] = 'Add a news-item,add_new_page.html';
 
-
 $menuArray[18]['head']['sv'] = 'Files';
 $menuArray[19]['content']['sv'] = 'Open file manager,add_new_page.html';
 
@@ -68,17 +68,18 @@ $menuArray[23]['content']['sv'] = 'Log out,add_new_page.html';
 //print_r($menuArray);
 $content .= "<ul>";
 foreach($menuArray as $key => $value) {
-    foreach($value as $key1=>$value1) {
+    //foreach($value as $key1=>$value1) {
         $content .= "<li>";
-        $valueArray = explode(',',$value1[$lang]);
+        
 
-        if($key1=='content') {
+        if($key=='content') {
+            $valueArray = explode(',',$value['content'][$lang]);
             $content .= "<a href=\"#\" onclick=\"loadHTML('" . $valueArray[1] . "');return false;\">" . $valueArray[0] . "</a>";
             $menuContent .= "<li><a href=\"#\" onclick=\"loadHTML('" . $valueArray[1] . "');return false;\">" . $valueArray[0] . "</a></li>";
         } else {
             $content .= "<b>".$value1[$lang]."</b>";
         }
-    }
+    //}
 }
 $content .= "<ul>";
 ?>

@@ -147,13 +147,13 @@ function copyContentElement($cmd,$table,$uid,$pid,$parentUid)
     
     if($parentUid) {
         $parentUidArray = explode(':',$parentUid);
-        $parentUid = $parentUidArray[1];
+        $parentUid = '-'.$parentUidArray[1];
             // Get sorting values
         $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('colpos', $table, 'uid='.intval($parentUid), '', '', '') or die('104; '.mysql_error());
         $row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res);
         $colpos = $row['colpos'];
     } else {
-        $parentUid = $pid;
+        $parentUid = 0;
         $colpos = 0;
     }
     
@@ -161,7 +161,8 @@ function copyContentElement($cmd,$table,$uid,$pid,$parentUid)
     
     $tce = t3lib_div::makeInstance('t3lib_TCEmain');
     $tce->stripslashes_values = 0;
-    $sortRes = $tce->getSortNumber($table,0,'-'.$parentUid);
+    $sortRes = $tce->getSortNumber($table,0,$parentUid);
+    //function       getSortNumber($table, $uid, $pid) {
 
     if(is_array($sortRes)) {
         $newSorting = $sortRes['sortNumber'];

@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="/fileadmin/templates/script/jquery-1.10.1.min.js?1399464401" type="text/javascript"></script>
-        <script language="javascript">
-            var top = new Object();
-            var TYPO3 = new Object();
-            var FileUploadWindow = new Object();
-            var TS = new Object();
-            /*var parent = new Object();
-            var list_frame = new Object();
-            parent.list_frame = $('#list_frame');*/
-            //parent.list_frame.document.location.href=theUrl;
-            top.TYPO3.FileUploadWindow = new Object();
-            //console.log(top.TYPO3);
-            top.TYPO3.FileUploadWindow.isFlashAvailable = function() {
-                return false;
-            };
-            top.TS.PATH_typo3= '/typo3/';
-            top.currentSubScript='../typo3conf/ext/dam/mod_file/index.php';
-            
-        </script>
+
         
-    </head>
-    <body>
         <div id="damcontainer">
-            <iframe name="navigation" height="600" width="175" src="/typo3conf/ext/dam/mod_main/tx_dam_navframe.php?&folderOnly=1"></iframe>
-            <iframe name="list_frame" id="list_frame" height="600" width="800" src="/typo3conf/ext/dam/mod_file/index.php"></iframe>
+            <iframe name="navigation" height="600" width="250" src="/typo3conf/ext/dam/mod_main/tx_dam_navframe.php?folderOnly=1"></iframe>
+            <iframe name="list_frame" id="list_frame" height="600" width="850" src="/typo3conf/ext/dam/mod_file/index.php"></iframe>
 
         </div>
-    </body>
-</html>
