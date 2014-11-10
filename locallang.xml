@@ -23,8 +23,11 @@
                          
                         <label index="new">New</label>
 			<label index="newTooltip">Create new page, content element or news item.</label>
-			<label index="newPage">New Page</label>
-			<label index="newPageTooltip">Create a new page as subpage to the current page.</label>
+			<label index="newPageBelow">New Page Inside This</label>
+			<label index="newPageBelowTooltip">Create a new page as subpage to the current page.</label>
+                        <label index="newPageInside">New Page Below This</label>
+			<label index="newPageInsideTooltip">Create a new page below the current page.</label>
+ 
                         <label index="newContent">New Content Element</label>
 			<label index="newContentTooltip">Create a new content element on the current page.</label>
                         <label index="newNews">New News Item</label>
@@ -90,6 +93,8 @@
 			<label index="saveCloseButton">Save &amp; Close</label>
 			<label index="closeButton">Close</label>
                         
+                        <label index="topLogoTooltip">Go to http://typo3.org</label>
+                        
                         <label index="js.dropMessage">Drop content here</label>
 			<label index="js.loadingMessage">Loading editing form</label>
 			<label index="js.ajaxError">AJAX Error</label>
@@ -134,8 +139,11 @@
                          
                         <label index="new">Lägg till</label>
 			<label index="newTooltip">Skapa ny sida, innehållselement eller nyhet.</label>
-			<label index="newPage">Ny sida</label>
-			<label index="newPageTooltip">Skapa en ny sida som undersida till den befintliga sidan.</label>
+			<label index="newPageBelow">Ny sida under</label>
+			<label index="newPageBelowTooltip">Skapa en ny sida direkt under den befintliga sidan.</label>
+                        <label index="newPageInside">Ny sida inuti denna</label>
+			<label index="newPageInsideTooltip">Skapa en ny sida inuti den befintliga sidan.</label>
+                        
                         <label index="newContent">Nytt innehållselement</label>
 			<label index="newContentTooltip">Skapa ett nytt innehållselement på den befintliga sida.</label>
                         <label index="newNews">Skapa nyhet</label>
@@ -200,6 +208,8 @@
                         <label index="saveButton">Spara</label>
 			<label index="saveCloseButton">Spara &amp; Stäng</label>
 			<label index="closeButton">Stäng</label>
+                        
+                        <label index="topLogoTooltip">Gå till http://typo3.org</label>
                         
                         <label index="js.dropMessage">Släpp innehållet här</label>
 			<label index="js.loadingMessage">Loading editing form</label>
