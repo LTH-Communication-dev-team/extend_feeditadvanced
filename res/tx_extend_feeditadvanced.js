@@ -599,10 +599,10 @@ function toggleHiddenObject(inputClass,myType)
     
     if(displayObject[myType]=='none') {
         displayObject[myType] = 'block';
-        $('#'+myType).css('display','inline-block');
+        $('.'+inputClass).css('display','inline-block');
     } else {
         displayObject[myType] = 'none';
-        $('#'+myType).css('display','none');
+        $('.'+inputClass).css('display','none');
     }
     setCookie('extend_feeditadvanced_usersettings', JSON.stringify(displayObject),0);
 }
