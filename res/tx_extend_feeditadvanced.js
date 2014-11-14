@@ -251,7 +251,7 @@ function ajax(cmd,table,uid,parentUid)
             } else if(cmd=='hidePage') {
                 $('#hideShowPage').html('<a title="'+resources.pageShowPageTooltip+'" href="#" onclick="showPage();return false;">'+resources.pageShowPage+'</a>');
                 $('.menuItem .selected').addClass('feEditAdvanced-hiddenPage-1');
-                //$('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu-1');
+                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu-1');
                 $('.menuItem .selected .icon-eye-close').remove();
                 $('.menuItem .selected').find('a').append('<span class="icon-ban-circle"></span>')
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageText);
