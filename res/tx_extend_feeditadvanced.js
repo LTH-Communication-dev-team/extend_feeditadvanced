@@ -250,25 +250,25 @@ function ajax(cmd,table,uid,parentUid)
                 //myObject.setupEventListeners();
             } else if(cmd=='hidePage') {
                 $('#hideShowPage').html('<a title="'+resources.pageShowPageTooltip+'" href="#" onclick="showPage();return false;">'+resources.pageShowPage+'</a>');
-                $('.menuItem .selected').addClass('feEditAdvanced-hiddenPage');
-                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu');
+                $('.menuItem .selected').addClass('feEditAdvanced-hiddenPage-1');
+                //$('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu-1');
                 $('.menuItem .selected .icon-eye-close').remove();
                 $('.menuItem .selected').find('a').append('<span class="icon-ban-circle"></span>')
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageText);
             } else if(cmd=='showPage') {
                 $('#hideShowPage').html('<a title="'+resources.pageHidePageTooltip+'" href="#" onclick="hidePage();return false;">'+resources.pageHidePage+'</a>');
                 $('.menuItem .selected .icon-ban-circle').remove();
-                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenPage');
+                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenPage-1');
                 showMessage(resources.showMessageShowHeader, resources.showMessageShowPageText);
             } else if(cmd=='hidePageInMenu') {
                 $('#hideShowPageInMenu').html('<a title="'+resources.pageShowPageInMenuTooltip+'" href="#" onclick="showPageInMenu();return false;">'+resources.pageShowPageInMenu+'</a>');
-                $('.menuItem .selected').addClass('feEditAdvanced-hiddenInMenu');
+                $('.menuItem .selected').addClass('feEditAdvanced-hiddenInMenu-1');
                 $('.menuItem .selected').find('a').append('<span class="icon-eye-close"></span>')
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageInMenuText);
             } else if(cmd=='showPageInMenu') {
                 $('#hideShowPageInMenu').html('<a title="'+resources.pageHidePageInMenuTooltip+'" href="#" onclick="hidePageInMenu();return false;">'+resources.pageHidePageInMenu+'</a>');
                 $('.menuItem .selected .icon-eye-close').remove();
-                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu');
+                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu-1');
                 showMessage(resources.showMessageShowHeader, resources.showMessageShowPageInMenuText);
 
             } else if(cmd=='logout') {
