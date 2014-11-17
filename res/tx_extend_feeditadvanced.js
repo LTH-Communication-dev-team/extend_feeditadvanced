@@ -456,7 +456,7 @@ function newPage(below)
 {
     showAjaxLoadingIcon();
     var pid = $('#pageid').val();
-    var url = 'index.php?eID=feeditadvanced&TSFE_EDIT%5Brecord%5D=pages%3A'+below+pid+'&TSFE_EDIT%5Bpid%5D='+pid+'&TSFE_EDIT%5BnewRecordInPid%5D='+pid+'&TSFE_EDIT[cmd]=new&pid='+pid+'&lang='+$('#beuser_lang').val();
+    var url = 'index.php?eID=feeditadvanced&TSFE_EDIT[record]=pages:'+pid+'&TSFE_EDIT[newRecordInPid]='+pid+'&pid='+pid+'&TSFE_EDIT[cmd]=new&TSFE_EDIT[newUid]=NEW&lang='+$('#beuser_lang').val();
     //http://typotest-2.kansli.lth.se/typo3/alt_doc.php?returnUrl=%2Ftypo3%2Fsysext%2Fcms%2Flayout%2Fdb_layout.php%3Fid%3D5&edit[pages][-5]=new&returnNewPageId=1
     var headerText = resources.newPageHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
     height = TYPO3.configuration.feeditadvanced.editWindow.height ? parseInt(TYPO3.configuration.feeditadvanced.editWindow.height) : 600;
@@ -596,13 +596,16 @@ function toggleHiddenObject(inputClass,myType)
     displayString = unescape(displayString);
     
     var displayObject = JSON.parse(displayString);
-    
+    //console.log(inputClass+','+myType + ',' + displayObject[myType]);
+
     if(displayObject[myType]=='none') {
         displayObject[myType] = 'block';
         $('.'+inputClass).css('display','inline-block');
+        $('#'+myType).css('display','inline-block');
     } else {
         displayObject[myType] = 'none';
         $('.'+inputClass).css('display','none');
+        $('#'+myType).css('display','none');
     }
     setCookie('extend_feeditadvanced_usersettings', JSON.stringify(displayObject),0);
 }
@@ -624,7 +627,6 @@ Ext.onReady(function() {
         //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().prev().remove();
     //}
     //console.log(window.navigator);
-    if(getCookie('be_typo_user')) {
        var id = null;
         $('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
         $('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
@@ -655,11 +657,14 @@ Ext.onReady(function() {
             //$(this).before('<a href="#" onclick="loadCategorySelector(\''+tmpId+'\');return false;">Share</a>');
         });
         //$('.newswrapper').before('<a href="#" onclick="loadCategorySelector();return false;">Share</a>');
-    };
     //Show Insert news in menu
     if($('.tt_news_container').length) {
         $('#extend_feeditadvanced_create_news').css('display','block');
     }
+    
+    //Add icons to hiddeninmenu and hidden page
+    $('.feEditAdvanced-hiddenInMenu-1 a').append('<span class="icon-eye-close"></span');
+    $('.feEditAdvanced-hiddenPage-1 a').append('<span class="icon-ban-circle"></span');
     
      //Show pastebutton if copycutitem cookie exist
     var copyCutCookie = getCookie('extend_feeditadvanced_copycutitem');

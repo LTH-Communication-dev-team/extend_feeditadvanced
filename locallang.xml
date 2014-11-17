@@ -23,10 +23,10 @@
                          
                         <label index="new">New</label>
 			<label index="newTooltip">Create new page, content element or news item.</label>
-			<label index="newPageBelow">New Page Inside This</label>
-			<label index="newPageBelowTooltip">Create a new page as subpage to the current page.</label>
-                        <label index="newPageInside">New Page Below This</label>
-			<label index="newPageInsideTooltip">Create a new page below the current page.</label>
+			<label index="newPageBelow">New Page Below This</label>
+			<label index="newPageBelowTooltip">Create a new page below the current page.</label>
+                        <label index="newPageInside">New Page Inside This</label>
+			<label index="newPageInsideTooltip">Create a new page as subpage to the current page.</label>
  
                         <label index="newContent">New Content Element</label>
 			<label index="newContentTooltip">Create a new content element on the current page.</label>
