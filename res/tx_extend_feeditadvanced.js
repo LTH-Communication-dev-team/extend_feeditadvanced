@@ -471,11 +471,11 @@ function editPage()
     //toggleItem('.feEditAdvanced-pageItemsMenu');
 }
 
-function newPage(below)
+function newPage()
 {
     showAjaxLoadingIcon();
     var pid = $('#pageid').val();
-    var url = 'index.php?eID=feeditadvanced&TSFE_EDIT[record]=pages:'+pid+'&TSFE_EDIT[newRecordInPid]='+pid+'&pid='+pid+'&TSFE_EDIT[cmd]=new&TSFE_EDIT[newUid]=NEW&lang='+$('#beuser_lang').val();
+    var url = 'index.php?eID=feeditadvanced&TSFE_EDIT[record]=pages:'+pid+'&TSFE_EDIT[newRecordInPid]='+pid+'&pid='+pid+'&TSFE_EDIT[cmd]=new&lang='+$('#beuser_lang').val();
     //http://typotest-2.kansli.lth.se/typo3/alt_doc.php?returnUrl=%2Ftypo3%2Fsysext%2Fcms%2Flayout%2Fdb_layout.php%3Fid%3D5&edit[pages][-5]=new&returnNewPageId=1
     var headerText = resources.newPageHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
     height = TYPO3.configuration.feeditadvanced.editWindow.height ? parseInt(TYPO3.configuration.feeditadvanced.editWindow.height) : 600;

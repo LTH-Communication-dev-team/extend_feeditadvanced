@@ -23,10 +23,8 @@
                          
                         <label index="new">New</label>
 			<label index="newTooltip">Create new page, content element or news item.</label>
-			<label index="newPageBelow">New Page Below This</label>
-			<label index="newPageBelowTooltip">Create a new page below the current page.</label>
-                        <label index="newPageInside">New Page Inside This</label>
-			<label index="newPageInsideTooltip">Create a new page as subpage to the current page.</label>
+                        <label index="newPage">New Page</label>
+			<label index="newPageTooltip">Create a new page as subpage to the current page.</label>
  
                         <label index="newContent">New Content Element</label>
 			<label index="newContentTooltip">Create a new content element on the current page.</label>
@@ -139,10 +137,8 @@
                          
                         <label index="new">Lägg till</label>
 			<label index="newTooltip">Skapa ny sida, innehållselement eller nyhet.</label>
-			<label index="newPageBelow">Ny sida under</label>
-			<label index="newPageBelowTooltip">Skapa en ny sida direkt under den befintliga sidan.</label>
-                        <label index="newPageInside">Ny sida inuti denna</label>
-			<label index="newPageInsideTooltip">Skapa en ny sida inuti den befintliga sidan.</label>
+                        <label index="newPage">Ny sida</label>
+			<label index="newPageTooltip">Skapa en ny sida inuti den befintliga sidan.</label>
                         
                         <label index="newContent">Nytt innehållselement</label>
 			<label index="newContentTooltip">Skapa ett nytt innehållselement på den befintliga sida.</label>
