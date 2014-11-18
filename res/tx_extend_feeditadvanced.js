@@ -666,12 +666,12 @@ Ext.onReady(function() {
     $('.feEditAdvanced-hiddenInMenu-1 > a').each(function() {
         var bg = $(this).css('background-color');
         var result;
-        console.log(bg);
         if(bg.indexOf('a') == -1 && bg.indexOf('0, 0, 0, 0') == -1){
             result = bg.replace(')', ', 0.50)').replace('rgb', 'rgba');
         } else if(bg.indexOf('0, 0, 0, 0') == -1) {
             result = bg.replace('0)', '0.50)');
         }
+        console.log(result);
         $(this).css('background-color',result);
         $(this).append('<span class="icon-eye-close"></span');
     });
@@ -684,6 +684,7 @@ Ext.onReady(function() {
         } else if(bg.indexOf('0.50)') == -1 && bg.indexOf('0, 0, 0, 0') == -1) {
             result = bg.replace('0)', '0.50)');
         }
+        console.log(result);
         $(this).css('background-color',result);
         $(this).append('<span class="icon-ban-circle"></span');
     });
