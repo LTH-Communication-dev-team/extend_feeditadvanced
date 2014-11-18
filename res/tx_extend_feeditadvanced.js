@@ -247,28 +247,27 @@ function ajax(cmd,table,uid,parentUid)
                 setCookie('extend_feeditadvanced_copycutitem', 'copy:'+table+':'+uid,1);
                 showMessage(resources.showMessagePasteHeader, resources.showMessagePasteCopyText);
                 var myObject = new TYPO3.FeEdit.EditPanel(table+':'+uid);
-                //myObject.setupEventListeners();
+
             } else if(cmd=='hidePage') {
                 $('#hideShowPage').html('<a title="'+resources.pageShowPageTooltip+'" href="#" onclick="showPage();return false;">'+resources.pageShowPage+'</a>');
-                $('.menuItem .selected').addClass('feEditAdvanced-hiddenPage-1');
-                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu-1');
-                $('.menuItem .selected .icon-eye-close').remove();
-                $('.menuItem .selected').find('a').append('<span class="icon-ban-circle"></span>')
+                $('.menuItem .selected > a').append('<span class="icon-ban-circle"></span>');
+                decreaseOpacity
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageText);
-            } else if(cmd=='showPage') {
-                $('#hideShowPage').html('<a title="'+resources.pageHidePageTooltip+'" href="#" onclick="hidePage();return false;">'+resources.pageHidePage+'</a>');
-                $('.menuItem .selected .icon-ban-circle').remove();
-                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenPage-1');
-                showMessage(resources.showMessageShowHeader, resources.showMessageShowPageText);
             } else if(cmd=='hidePageInMenu') {
                 $('#hideShowPageInMenu').html('<a title="'+resources.pageShowPageInMenuTooltip+'" href="#" onclick="showPageInMenu();return false;">'+resources.pageShowPageInMenu+'</a>');
-                $('.menuItem .selected').addClass('feEditAdvanced-hiddenInMenu-1');
-                $('.menuItem .selected').find('a').append('<span class="icon-eye-close"></span>')
+                $('.menuItem .selected > a').append('<span class="icon-eye-close"></span>');
+                decreaseOpacity();
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageInMenuText);
+        //******************************show
+            } else if(cmd=='showPage') {
+                $('#hideShowPage').html('<a title="'+resources.pageHidePageTooltip+'" href="#" onclick="hidePage();return false;">'+resources.pageHidePage+'</a>');
+                $('.menuItem .selected > a').find('.icon-ban-circle').remove();
+                increaseOpacity();
+                showMessage(resources.showMessageShowHeader, resources.showMessageShowPageText);
             } else if(cmd=='showPageInMenu') {
                 $('#hideShowPageInMenu').html('<a title="'+resources.pageHidePageInMenuTooltip+'" href="#" onclick="hidePageInMenu();return false;">'+resources.pageHidePageInMenu+'</a>');
-                $('.menuItem .selected .icon-eye-close').remove();
-                $('.menuItem .selected').removeClass('feEditAdvanced-hiddenInMenu-1');
+                $('.menuItem .selected > a').find('.icon-eye-close').remove();
+                increaseOpacity();
                 showMessage(resources.showMessageShowHeader, resources.showMessageShowPageInMenuText);
 
             } else if(cmd=='logout') {
@@ -290,6 +289,26 @@ function ajax(cmd,table,uid,parentUid)
             console.log(errMsg);
         }
     });
+}
+
+function decreaseOpacity()
+{
+    var bg = $('.menuItem .selected > a').css('background-color');
+    if(bg.indexOf('a') == -1 && bg.indexOf('0, 0, 0, 0') == -1){
+        result = bg.replace(')', ', 0.50)').replace('rgb', 'rgba');
+    } else if(bg.indexOf('0, 0, 0, 0') == -1) {
+        result = bg.replace(', 0)', ', 0.50)');
+    }
+    $('.menuItem .selected > a').css('background-color',result);
+}
+
+function increaseOpacity()
+{
+    var bg = $('.menuItem .selected > a').css('background-color');
+    if(bg.indexOf('0, 0, 0, 0') == -1){
+        result = bg.replace(', 0.50)', ', 0)');
+    }
+    $('.menuItem .selected > a').css('background-color',result);
 }
 
 function hideMessage(divtag)
