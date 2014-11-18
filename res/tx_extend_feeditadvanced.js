@@ -600,7 +600,7 @@ function toggleHiddenObject(inputClass,myType)
 
     if(displayObject[myType]=='none') {
         displayObject[myType] = 'block';
-        $('.'+inputClass).css('display','inline-block');
+        $('.'+inputClass).css('display','block');
         $('#'+myType).css('display','inline-block');
     } else {
         displayObject[myType] = 'none';
@@ -671,7 +671,7 @@ Ext.onReady(function() {
         } else if(bg.indexOf('0, 0, 0, 0') == -1) {
             result = bg.replace('0)', '0.50)');
         }
-        console.log(result);
+        //console.log(result);
         $(this).css('background-color',result);
         $(this).append('<span class="icon-eye-close"></span');
     });
@@ -684,7 +684,7 @@ Ext.onReady(function() {
         } else if(bg.indexOf('0.50)') == -1 && bg.indexOf('0, 0, 0, 0') == -1) {
             result = bg.replace('0)', '0.50)');
         }
-        console.log(result);
+        //console.log(result);
         $(this).css('background-color',result);
         $(this).append('<span class="icon-ban-circle"></span');
     });
