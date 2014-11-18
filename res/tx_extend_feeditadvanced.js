@@ -662,9 +662,34 @@ Ext.onReady(function() {
         $('#extend_feeditadvanced_create_news').css('display','block');
     }
     
-    //Add icons to hiddeninmenu and hidden page
-    $('.feEditAdvanced-hiddenInMenu-1 a').append('<span class="icon-eye-close"></span');
-    $('.feEditAdvanced-hiddenPage-1 a').append('<span class="icon-ban-circle"></span');
+    //Add icons and genomskinlig bakgrund to hiddeninmenu and hidden page
+    $('.feEditAdvanced-hiddenInMenu-1 > a').each(function() {
+        var bg = $(this).css('background-color');
+        var result;
+        console.log(bg);
+        if(bg.indexOf('a') == -1 && bg.indexOf('0, 0, 0, 0') == -1){
+            result = bg.replace(')', ', 0.50)').replace('rgb', 'rgba');
+        } else if(bg.indexOf('0, 0, 0, 0') == -1) {
+            result = bg.replace('0)', '0.50)');
+        }
+        $(this).css('background-color',result);
+        $(this).append('<span class="icon-eye-close"></span');
+    });
+    
+    $('.feEditAdvanced-hiddenPage-1 > a').each(function() {
+        var bg = $(this).css('background-color');
+        var result;
+        if(bg.indexOf('a') == -1 && bg.indexOf('0, 0, 0, 0') == -1){
+            result = bg.replace(')', ', 0.50)').replace('rgb', 'rgba');
+        } else if(bg.indexOf('0.50)') == -1 && bg.indexOf('0, 0, 0, 0') == -1) {
+            result = bg.replace('0)', '0.50)');
+        }
+        $(this).css('background-color',result);
+        $(this).append('<span class="icon-ban-circle"></span');
+    });
+    
+    //                        background-color: rgba(0,0,255,0.5);
+
     
      //Show pastebutton if copycutitem cookie exist
     var copyCutCookie = getCookie('extend_feeditadvanced_copycutitem');
