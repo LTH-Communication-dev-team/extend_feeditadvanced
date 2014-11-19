@@ -506,7 +506,9 @@ function showPageInMenu()
 
 function newContent()
 {
-    toggleItem('.feEditAdvanced-secondRow');
+    makeVisibleUnvisible('.feEditAdvanced-secondRow');
+    //$('.feEditAdvanced-newItemsMenu').hide();
+    //toggleItem('.feEditAdvanced-newItemsMenu');
 }
 
 function redirectToParentPage(pageId)
@@ -591,6 +593,15 @@ function toggleItem(selector,eType)
         $('.feEditAdvanced-secondRow').css('visibility','hidden');
     }
     $(selector).toggle();
+}
+
+function makeVisibleUnvisible(selector)
+{
+    if($(selector).css('visibility')==='hidden') {
+        $(selector).css('visibility','visible');
+    } else {
+        $(selector).css('visibility','hidden');
+    }
 }
 
 function hideItems(exception)
