@@ -884,7 +884,7 @@ div.feEditAdvanced-contentWrapperSmall .start-grid-8 {
 }
 
 .feEditAdvanced-secondRow {
-    display: none;
+    visibility: hidden;
 }
 
 #extend_feeditadvanced_create_news {

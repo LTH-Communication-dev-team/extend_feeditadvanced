@@ -507,8 +507,6 @@ function showPageInMenu()
 function newContent()
 {
     toggleItem('.feEditAdvanced-secondRow');
-    //$('.feEditAdvanced-newItemsMenu').hide();
-    //toggleItem('.feEditAdvanced-newItemsMenu');
 }
 
 function redirectToParentPage(pageId)
@@ -590,7 +588,7 @@ function removeRightColumn()
 function toggleItem(selector,eType)
 {
     if(eType=='me') {
-        $('.feEditAdvanced-secondRow').hide();
+        $('.feEditAdvanced-secondRow').css('visibility','hidden');
     }
     $(selector).toggle();
 }
