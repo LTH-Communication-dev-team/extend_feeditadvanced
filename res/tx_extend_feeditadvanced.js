@@ -404,8 +404,10 @@ function fileManager()
     //window.open('/typo3conf/ext/dam/mod_file/index.php','mywindow','width=1024,height=725');
     //window.open('/typo3conf/ext/extend_feeditadvanced/view/tx_extend_feeditadvanced_dam.php','mywindow','width=1024,height=725');
     //hideItems('');
-    $('.feEditAdvanced-secondRow').hide();
+    toggleItem('.feEditAdvanced-secondRow');
     showAjaxLoadingIcon();
+    console.log(top.TS.PATH_typo3+';'+top.currentSubScript);
+    //http://localhost/typo3conf/ext/dam/mod_main/typo3/?&SLCMD[SELECT][txdamFolder][C%3A%2Fwamp%2Fwww%2Ftypo3_demo%2Ffileadmin%2Ftemplates%2Fimages%2F]=1 404 (Not Found) 
     var headerText = resources.damHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
     var url='/typo3conf/ext/extend_feeditadvanced/view/tx_extend_feeditadvanced_dam.html';
     var height = TYPO3.configuration.feeditadvanced.editWindow.height ? parseInt(TYPO3.configuration.feeditadvanced.editWindow.height) : 600;
@@ -416,7 +418,7 @@ function fileManager()
 
 function mailFormAdmin()
 {
-    $('.feEditAdvanced-secondRow').hide();
+    toggleItem('.feEditAdvanced-secondRow');
     showAjaxLoadingIcon();
     var pid = $('#pageid').val();
     var headerText = resources.mailFormAdminHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
@@ -441,7 +443,7 @@ function userSettings()
 
 function loadHelp()
 {
-    $('.feEditAdvanced-secondRow').hide();
+    toggleItem('.feEditAdvanced-secondRow');
     //showAjaxLoadingIcon();
     var url = '/typo3conf/ext/extend_feeditadvanced/help/index.php?lang='+$('#beuser_lang').val();
     /*var headerText = resources.helpHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
