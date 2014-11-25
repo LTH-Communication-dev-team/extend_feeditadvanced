@@ -272,7 +272,7 @@ function ajax(cmd,table,uid,parentUid)
 
             } else if(cmd=='logout') {
                 if(data.url) {
-                    window.location = '/typo3/logout.php?redirect=' + data.url + '?no_cache=1';
+                    window.location = '/typo3/logout.php?redirect=' + data.url + '&no_cache=1';
                 } else {
                     //console.log('no data');
                 }
