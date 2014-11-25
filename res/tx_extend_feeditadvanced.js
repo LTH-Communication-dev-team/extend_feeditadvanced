@@ -215,7 +215,7 @@ function ajax(cmd,table,uid,parentUid)
             } else if(cmd=='cutContentElement') {
                 var colpos = data.colpos;
                 var pasteContent = data.content; //getCookie('extend_feeditadvanced_copycutitem');
-                console.log(data.content);
+                //console.log(data.content);
                 //var pasteContentArray = data.content; //pasteContent.split(':');
                 //var table = pasteContentArray[1];
                 //var uid = pasteContentArray[2];
@@ -274,19 +274,19 @@ function ajax(cmd,table,uid,parentUid)
                 if(data.url) {
                     window.location = '/typo3/logout.php?redirect=' + data.url + '?no_cache=1';
                 } else {
-                    console.log('no data');
+                    //console.log('no data');
                 }
             }
         },
         error: function(xhr, status, error) {
             //var err = eval("(" + xhr.responseText + ")");
-            console.log(error);
+            //console.log(error);
         },
         complete: function(data) {
             //console.log('complete'+data.table);
         },
         failure: function(errMsg) {
-            console.log(errMsg);
+            //console.log(errMsg);
         }
     });
 }
@@ -580,7 +580,7 @@ function addRightColumn()
 }
 /*function onDivHide()
 {
-    console.log('tjo');
+    //console.log('tjo');
 }
 */
 function removeRightColumn()
