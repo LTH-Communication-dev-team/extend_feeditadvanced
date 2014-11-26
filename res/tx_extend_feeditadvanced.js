@@ -203,7 +203,7 @@ function ajax(cmd,table,uid,parentUid)
                     var wrapperId = $('.feEditAdvanced-firstWrapper:first').parent().attr('id');
                     parentUid = $('#'+wrapperId+' .feEditAdvanced-allWrapper:last').attr('id');
                 }
-                console.log(pasteContent);
+                console.log(parentUid.replace(':','\\:'));
                 $('#'+parentUid.replace(':','\\:')).after(pasteContent);
                /* if(!parentUid) {
                     $('.feEditAdvanced-firstWrapper:first').after(pasteContent.replace('id="'+table+':'+uid+'"','id="'+table+':'+newId+'"').replace(' feEditAdvanced-allWrapperHover','').replace('visibility: visible;','visibility: hidden;'));
