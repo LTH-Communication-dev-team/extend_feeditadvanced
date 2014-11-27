@@ -66,6 +66,7 @@ $sid = t3lib_div::_GP('sid');
 $pageId = t3lib_div::_GP('pid');
 $parentUid = t3lib_div::_GP('parentUid'); 
 $templateclass = t3lib_div::_GP('templateclass');
+$tmpContent = t3lib_div::_GP('tmpContent');
 
 $content = array();
 switch($cmd) {
@@ -102,9 +103,35 @@ switch($cmd) {
     case "logout":
         $content = logout($table);
         break;
+    case "tmpContent":
+        $content = tmpContent($tmpContent);
+	break;
 }
 
 echo json_encode($content);
+
+function tmpContent($tmpContent)
+{
+    if ($_COOKIE['be_typo_user']) {
+        require_once (PATH_t3lib.'class.t3lib_befunc.php');
+        require_once (PATH_t3lib.'class.t3lib_userauthgroup.php');
+        require_once (PATH_t3lib.'class.t3lib_beuserauth.php');
+        require_once (PATH_t3lib.'class.t3lib_tsfebeuserauth.php');
+
+        // the value this->formfield_status is set to empty in order to disable login-attempts to the backend account through this script
+        // @todo 	Comment says its set to empty, but where does that happen?
+
+        $GLOBALS['BE_USER'] = t3lib_div::makeInstance('t3lib_tsfeBeUserAuth');
+        $GLOBALS['BE_USER']->start();
+        $GLOBALS['BE_USER']->unpack_uc('');
+        $beuserid = $GLOBALS['BE_USER']->user['uid'];
+	
+	$GLOBALS['TYPO3_DB']->exec_DELETEquery('tx_feeditadvanced_tmpcontent', 'cruser_id='.intval($beuserid));
+	
+	$insertArray = array('cruser_id' => $beuserid, 'crdate' => time(), tstamp => time(), 'tmpcontent' => $tmpContent);
+	$res = $GLOBALS['TYPO3_DB']->exec_INSERTquery('tx_feeditadvanced_tmpcontent', $insertArray) or die("132; ".mysql_error());
+    }
+}
 
 function cutContentElement($cmd,$table,$uid,$pid,$parentUid)
 {
@@ -205,7 +232,7 @@ function copyContentElement($cmd,$table,$uid,$pid,$parentUid)
 function renderContentElement($table, $uid)
 {
     global $setup;
-    
+        
     require_once (PATH_t3lib.'class.t3lib_befunc.php');
     require_once (PATH_t3lib.'class.t3lib_userauthgroup.php');
     require_once (PATH_t3lib.'class.t3lib_beuserauth.php');
@@ -215,6 +242,7 @@ function renderContentElement($table, $uid)
     $GLOBALS['BE_USER']->lockIP = $GLOBALS['TYPO3_CONF_VARS']['BE']['lockIP'];
     $GLOBALS['BE_USER']->workspace = 0;
     $GLOBALS['BE_USER']->start();
+    $beuserid = $GLOBALS['BE_USER']->user['uid'];
 
     $GLOBALS['TSFE']->newCObj();
     if(intval($uid)) {
@@ -225,13 +253,21 @@ function renderContentElement($table, $uid)
     }
 
     $cObj = t3lib_div::makeInstance('tslib_cObj');
-    $cObj->start($contentElementRow, 'tt_content');
+    //$cObj->start($contentElementRow, 'tt_content');
     //$conf = array('allow' => 'edit, new, delete, hide', 'cut', 'copy');
     $conf = array('allow' => 'move,new,edit,hide,unhide,delete,cut,copy', 'line' => 5, 'label' => '%s', 'onlyCurrentPid' => 1, 'previewBorder' => 4, 'edit.' => Array ( 'displayRecord' => 1 ) );
     
             // @todo	Hack to render editPanel for records other than tt_content.
+    $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('tmpcontent', 'tx_feeditadvanced_tmpcontent', 'cruser_id='.intval($beuserid), '', '', '') or die('261; '.mysql_error());
+    $row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res);
+    $cObjOutput = $row['tmpcontent'];
+    $GLOBALS['TYPO3_DB']->sql_free_result($res);
     if(($table == 'tt_content') && ($uid != 'NEW')) {
-            $cObjOutput = $cObj->cObjGetSingle($setup['tt_content'], $setup['tt_content.']);
+        //$cObjOutput = $cObj->cObjGetSingle($setup['tt_content'], $setup['tt_content.']);
+	/*$conf['tables'] = 'tt_content';
+	$conf['source'] = 602;
+	$conf['dontCheckPid'] = 1;
+	return $cObj->cObjGetSingle('RECORDS', $conf);*/
     } else {
             
             if ($uid == 'NEW') {
@@ -240,7 +276,7 @@ function renderContentElement($table, $uid)
             if (isset($GLOBALS['BE_USER']->frontendEdit->TSFE_EDIT['newRecordInPid'])) {
                     $conf['newRecordInPid'] = $GLOBALS['BE_USER']->frontendEdit->TSFE_EDIT['newRecordInPid'];
             }
-            $cObjOutput = $cObj->editPanel('', $conf, $table . ':' . $uid, $contentElementRow);
+            //$cObjOutput = $cObj->editPanel('', $conf, $table . ':' . $uid, $contentElementRow);
     }
     require_once(t3lib_extMgm::extPath('feeditadvanced') . 'view/class.tx_feeditadvanced_editpanel.php');
     $panelObj = new tx_feeditadvanced_editpanel;

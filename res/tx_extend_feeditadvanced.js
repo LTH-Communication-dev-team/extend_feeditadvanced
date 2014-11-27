@@ -3,9 +3,10 @@ Ext.namespace('TYPO3.Backend.NavigationContainer');
 var fsMod;
 //TYPO3.Backend.NavigationContainer.PageTree = null;
 TYPO3.Backend.NavigationContainer.PageTree = null;
+
 //TYPO3.LLL.core.csh_tooltip_loading = null;
 
-TYPO3.FeEdit.ExtendEditWindow = Ext.extend(TYPO3.FeEdit.Base, {
+/*TYPO3.FeEdit.ExtendTYPO3.settingsEditWindow = Ext.extend(TYPO3.FeEdit.Base, {
 	editPanel: null,
 	targetID: null,
 	
@@ -64,7 +65,7 @@ TYPO3.FeEdit.ExtendEditWindow = Ext.extend(TYPO3.FeEdit.Base, {
 	setTargetID: function(id) {
 		this.targetID = id;
 	}
-});
+});*/
 
 /*
  * 
@@ -102,7 +103,7 @@ TYPO3.FeEdit.ExtendEditPanel = Ext.extend(TYPO3.FeEdit.Base, {
 
 */
 
-TYPO3.FeEdit.DeleteAction = Ext.extend(TYPO3.FeEdit.EditPanelAction, {
+/*TYPO3.FeEdit.DeleteAction = Ext.extend(TYPO3.FeEdit.EditPanelAction, {
 	_process: function(json) {
 		if (this.parent && this.parent.getTableName() != 'pages') {
                     var parentDiv = this.parent.el.dom.parentElement.id;
@@ -113,7 +114,6 @@ TYPO3.FeEdit.DeleteAction = Ext.extend(TYPO3.FeEdit.EditPanelAction, {
                         if(noColumn==0 && $("#content_sidebar_wrapper").length>0) {
                             removeRightColumn();
                         }
-                        //feEditAdvanced-allWrapper
 		}
 	},
 
@@ -132,11 +132,11 @@ TYPO3.FeEdit.DeleteAction = Ext.extend(TYPO3.FeEdit.EditPanelAction, {
 	},
 
 	_isModalAction: false
-});
+});*/
 
-function ajax(cmd,table,uid,parentUid)
+function ajax(cmd,table,uid,parentUid,tmpContent)
 {
-    //console.log(cmd+table+uid+parentUid);
+    //console.log(cmd+table+uid+parentUid+tmpContent);
     $("html, body").animate({ scrollTop: 0 }, "slow");
     var pid = $('#pageid').val();
     $.ajax({
@@ -150,6 +150,7 @@ function ajax(cmd,table,uid,parentUid)
             pid : pid,
             parentUid : parentUid,
             lang : $('#beuser_lang').val(),
+            tmpContent : tmpContent,
             sid : Math.random()
         },
         //contentType: "application/json; charset=utf-8",
@@ -193,6 +194,8 @@ function ajax(cmd,table,uid,parentUid)
                 }
                 //pasteContent = pasteContent.replace('value="'+table+':'+uid+'"','value="'+table+':'+newId+'"');
                 pasteContent = pasteContent.replace(/id="ext-gen/g,'id="ext-gen'+newId);
+                pasteContent = pasteContent.replace(/name="c/g,'name="c'+newId);
+                
                 if(colpos==2) {
                     pasteContent = pasteContent.replace('feEditAdvanced-draggable draggable','feEditAdvanced-draggable draggable feEditAdvanced-contentWrapperSmall');
                 } else if(colpos==0) {
@@ -203,7 +206,7 @@ function ajax(cmd,table,uid,parentUid)
                     var wrapperId = $('.feEditAdvanced-firstWrapper:first').parent().attr('id');
                     parentUid = $('#'+wrapperId+' .feEditAdvanced-allWrapper:last').attr('id');
                 }
-                console.log(pasteContent);
+                //console.log(pasteContent);
                 $('#'+parentUid.replace(':','\\:')).after(pasteContent);
                /* if(!parentUid) {
                     $('.feEditAdvanced-firstWrapper:first').after(pasteContent.replace('id="'+table+':'+uid+'"','id="'+table+':'+newId+'"').replace(' feEditAdvanced-allWrapperHover','').replace('visibility: visible;','visibility: hidden;'));

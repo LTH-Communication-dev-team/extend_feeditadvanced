@@ -95,3 +95,4 @@ TYPO3.LLL = {"core":{"waitTitle":"Logging in...","refresh_login_failed":"Login f
 			"cutNotification":"Cutting content",
 			"pasteNotification":"Pasting content",
 			"updatingContent":"Updating content"}};
+                
