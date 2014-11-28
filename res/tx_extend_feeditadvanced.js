@@ -446,7 +446,7 @@ function userSettings()
 
 function loadHelp()
 {
-    toggleItem('.feEditAdvanced-secondRow');
+    $('.feEditAdvanced-secondRow').hide();
     //showAjaxLoadingIcon();
     var url = '/typo3conf/ext/extend_feeditadvanced/help/index.php?lang='+$('#beuser_lang').val();
     /*var headerText = resources.helpHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
@@ -460,7 +460,7 @@ function loadHelp()
             title: resources.helpHeader,
             width: 700,
             height: 700,
-            resizable: false
+            resizable: true
     });
     $dialog.dialog('open');
 }
