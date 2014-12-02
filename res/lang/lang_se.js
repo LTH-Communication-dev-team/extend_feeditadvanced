@@ -47,7 +47,9 @@ var resources = {
     "showMessageCopyPageHeader" : "Kopiera",
     "showMessageCopyPageText" : "Sidan har kopierats.",
     "showMessageMovePageHeader" : "Flytta",
-    "showMessageMovePageText" : "Sidan har flyttats."
+    "showMessageMovePageText" : "Sidan har flyttats.",
+    "showMessageAddRightColumnHeader" : "Nytt",
+    "showMessageAddRightColumnText" : "Kolumnen har skapats."    
 };
 
 TYPO3.LLL = {"core":{"waitTitle":"Logging in...","refresh_login_failed":"Login failed","refresh_login_failed_message":"Password not correct.",
