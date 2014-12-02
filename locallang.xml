@@ -174,8 +174,8 @@
                         <label index="userLogout">Logga ut</label>
 			<label index="userLogoutTooltip">Logga ut från editeringsverktyget.</label>
 
-                        <label index="paste">Klistra in</label>
-                        <label index="pasteTooltip">Klistra in.</label>
+                        <label index="paste">Infoga</label>
+                        <label index="pasteTooltip">Infoga.</label>
                         <label index="copyIcon">Kopiera</label>
 			<label index="copyTitle">Kopiera element.</label>
 			<label index="cutIcon">Klipp ut</label>
@@ -193,7 +193,7 @@
 			<label index="newRecordInTopOfColumnTitle">Nytt innehållselement.</label>
 			<label index="newRecordTitle">Nytt innehåll efter detta element.</label>
                         <label index="pasteIcon">Kliistra in</label>
-			<label index="pasteTitle">Klistra in element efter existerande element.</label>
+			<label index="pasteTitle">Infoga element efter existerande element.</label>
 			<label index="unhideIcon">Visa</label>
 			<label index="unhideTitle">Visa detta gömda element.</label>
 			<label index="dragIcon">Dra</label>
@@ -288,8 +288,8 @@
                         <label index="userLogout">Logga ut</label>
 			<label index="userLogoutTooltip">Logga ut från editeringsverktyget.</label>
 
-                        <label index="paste">Klistra in</label>
-                        <label index="pasteTooltip">Klistra in.</label>
+                        <label index="paste">Infoga</label>
+                        <label index="pasteTooltip">Infoga.</label>
                         <label index="copyIcon">Kopiera</label>
 			<label index="copyTitle">Kopiera element.</label>
 			<label index="cutIcon">Klipp ut</label>
@@ -307,7 +307,7 @@
 			<label index="newRecordInTopOfColumnTitle">Nytt innehållselement.</label>
 			<label index="newRecordTitle">Nytt innehåll efter detta element.</label>
                         <label index="pasteIcon">Kliistra in</label>
-			<label index="pasteTitle">Klistra in element efter existerande element.</label>
+			<label index="pasteTitle">Infoga element efter existerande element.</label>
 			<label index="unhideIcon">Visa</label>
 			<label index="unhideTitle">Visa detta gömda element.</label>
 			<label index="dragIcon">Dra</label>

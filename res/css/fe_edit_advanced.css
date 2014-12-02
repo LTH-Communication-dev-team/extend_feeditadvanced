@@ -896,6 +896,10 @@ div.feEditAdvanced-contentWrapperSmall .start-grid-8 {
     font-size: 12px;
 }
 
+.top_menu_item {
+    cursor: pointer;
+}
+
 .fancybox-close {
     position: absolute;
     top: 0px;
