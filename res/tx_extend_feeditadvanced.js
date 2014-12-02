@@ -255,25 +255,29 @@ function ajax(cmd,table,uid,parentUid,tmpContent)
             } else if(cmd=='hidePage') {
                 $('#hideShowPage').html('<a title="'+resources.pageShowPageTooltip+'" href="#" onclick="showPage();return false;">'+resources.pageShowPage+'</a>');
                 $('.menuItem .selected > a').append('<span class="icon-ban-circle"></span>');
-                decreaseOpacity
+                decreaseOpacity();
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageText);
+                $('.feEditAdvanced-pageItemsMenu').hide();
             } else if(cmd=='hidePageInMenu') {
                 $('#hideShowPageInMenu').html('<a title="'+resources.pageShowPageInMenuTooltip+'" href="#" onclick="showPageInMenu();return false;">'+resources.pageShowPageInMenu+'</a>');
                 $('.menuItem .selected > a').append('<span class="icon-eye-close"></span>');
                 decreaseOpacity();
                 showMessage(resources.showMessageShowHeader, resources.showMessageHidePageInMenuText);
+                $('.feEditAdvanced-pageItemsMenu').hide();
+                
         //******************************show
             } else if(cmd=='showPage') {
                 $('#hideShowPage').html('<a title="'+resources.pageHidePageTooltip+'" href="#" onclick="hidePage();return false;">'+resources.pageHidePage+'</a>');
                 $('.menuItem .selected > a').find('.icon-ban-circle').remove();
                 increaseOpacity();
                 showMessage(resources.showMessageShowHeader, resources.showMessageShowPageText);
+                $('.feEditAdvanced-pageItemsMenu').hide();
             } else if(cmd=='showPageInMenu') {
                 $('#hideShowPageInMenu').html('<a title="'+resources.pageHidePageInMenuTooltip+'" href="#" onclick="hidePageInMenu();return false;">'+resources.pageHidePageInMenu+'</a>');
                 $('.menuItem .selected > a').find('.icon-eye-close').remove();
                 increaseOpacity();
                 showMessage(resources.showMessageShowHeader, resources.showMessageShowPageInMenuText);
-
+                $('.feEditAdvanced-pageItemsMenu').hide();
             } else if(cmd=='logout') {
                 if(data.url) {
                     window.location = '/typo3/logout.php?redirect=' + data.url + '&no_cache=1';
