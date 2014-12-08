@@ -1,6 +1,7 @@
 <?php
 $id=null;
 $copy=null;
+//WHAT!
 
 if(isset($_GET['id'])) $id = $_GET['id'];
 if($id) {
