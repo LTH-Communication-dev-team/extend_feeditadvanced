@@ -87,6 +87,9 @@
 			<label index="upIcon">Up</label>
 			<label index="upTitle">Move this up.</label>
                         
+                        <label index="hideContentElementsRowTooltip">Hide insert content elements.</label>
+                        <label index="hideContentElementsRow">Hide insert content elements</label>
+                        
                         <label index="saveButton">Save</label>
 			<label index="saveCloseButton">Save &amp; Close</label>
 			<label index="closeButton">Close</label>
@@ -200,6 +203,9 @@
 			<label index="dragTitle">Klicka för att dra detta element.</label>
 			<label index="upIcon">Upp</label>
 			<label index="upTitle">Flytta detta up.</label>
+                        
+                        <label index="hideContentElementsRowTooltip">Göm infoga innehållselement.</label>
+                        <label index="hideContentElementsRow">Göm infoga innehållselement</label>
                         
                         <label index="saveButton">Spara</label>
 			<label index="saveCloseButton">Spara &amp; Stäng</label>

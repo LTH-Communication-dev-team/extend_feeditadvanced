@@ -405,6 +405,12 @@ function createNews()
     
 }*/
 
+function hideContentElementsRow()
+{
+    $('.feEditAdvanced-secondRow').css('visibility','hidden');
+    $(this).hide();
+}
+
 function fileManager()
 {
     //window.open('/typo3/backend.php?returnUrl=closeframe&module=txdamM1_file','mywindow','width=1024,height=725');
@@ -412,7 +418,7 @@ function fileManager()
     //window.open('/typo3conf/ext/dam/mod_file/index.php','mywindow','width=1024,height=725');
     //window.open('/typo3conf/ext/extend_feeditadvanced/view/tx_extend_feeditadvanced_dam.php','mywindow','width=1024,height=725');
     //hideItems('');
-    $('.feEditAdvanced-secondRow').hide();
+    //$('.feEditAdvanced-secondRow').hide();
     showAjaxLoadingIcon();
     //http://localhost/typo3conf/ext/dam/mod_main/typo3/?&SLCMD[SELECT][txdamFolder][C%3A%2Fwamp%2Fwww%2Ftypo3_demo%2Ffileadmin%2Ftemplates%2Fimages%2F]=1 404 (Not Found) 
     var headerText = resources.damHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
@@ -425,7 +431,7 @@ function fileManager()
 
 function mailFormAdmin()
 {
-    $('.feEditAdvanced-secondRow').hide();
+    //$('.feEditAdvanced-secondRow').hide();
     showAjaxLoadingIcon();
     var pid = $('#pageid').val();
     var headerText = resources.mailFormAdminHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
@@ -450,7 +456,7 @@ function userSettings()
 
 function loadHelp()
 {
-    $('.feEditAdvanced-secondRow').hide();
+    //$('.feEditAdvanced-secondRow').hide();
     //showAjaxLoadingIcon();
     var url = '/typo3conf/ext/extend_feeditadvanced/help/index.php?lang='+$('#beuser_lang').val();
     /*var headerText = resources.helpHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
@@ -517,7 +523,9 @@ function showPageInMenu()
 
 function newContent()
 {
-    toggleItem('.feEditAdvanced-secondRow');
+    $('.feEditAdvanced-secondRow').css('visibility','visible');
+    $('#extend_feeditadvanced_top_menu_hide_content_elements_row').show();
+    
     //$('.feEditAdvanced-newItemsMenu').hide();
     //toggleItem('.feEditAdvanced-newItemsMenu');
 }
@@ -600,7 +608,7 @@ function removeRightColumn()
 
 function toggleItem(selector,eType)
 {
-    if(eType=='me') {
+    /*if(eType=='me') {
         $('.feEditAdvanced-secondRow').css('visibility','hidden');
     }
     if(selector=='.feEditAdvanced-secondRow') {
@@ -609,9 +617,9 @@ function toggleItem(selector,eType)
         } else {
             $(selector).css('visibility','hidden');
         }
-    } else {
+    } else {*/
         $(selector).toggle();
-    }
+    //}
 }
 
 function hideItems(exception)
