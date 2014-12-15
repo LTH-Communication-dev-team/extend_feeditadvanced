@@ -408,7 +408,8 @@ function createNews()
 function hideContentElementsRow()
 {
     $('.feEditAdvanced-secondRow').css('visibility','hidden');
-    $(this).hide();
+    $('#extend_feeditadvanced_top_menu_hide_content_elements_row').hide();
+    return false;
 }
 
 function fileManager()
