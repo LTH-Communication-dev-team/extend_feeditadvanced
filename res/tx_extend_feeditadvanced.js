@@ -675,7 +675,7 @@ Ext.onReady(function() {
     //}
     //console.log(window.navigator);
         var id = null;
-        $('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
+        //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
         $('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
  
         //feEditAdvanced-contentWrapper feEditAdvanced-editButton editAction
@@ -712,13 +712,14 @@ Ext.onReady(function() {
     //Add icons and genomskinlig bakgrund to hiddeninmenu and hidden page
     $('.feEditAdvanced-hiddenInMenu-1 > a').each(function() {
         var bg = $(this).css('background-color');
+        //console.log(bg);
         var result;
         if(bg.indexOf('a') == -1 && bg.indexOf('0, 0, 0, 0') == -1){
             result = bg.replace(')', ', 0.50)').replace('rgb', 'rgba');
         } else if(bg.indexOf('0, 0, 0, 0') == -1) {
             result = bg.replace('0)', '0.50)');
         }
-        //console.log(result);
+        
         $(this).css('background-color',result);
         $(this).append('<span class="icon-eye-close"></span');
     });
