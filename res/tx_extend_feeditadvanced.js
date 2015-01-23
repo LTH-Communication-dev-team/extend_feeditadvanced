@@ -677,6 +677,7 @@ Ext.onReady(function() {
         var id = null;
         $('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
         //$('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
+        $('div.feEditAdvanced-contentWrapper .tt_news_container').wrap('<div class="feEditAdvanced-allWrapper"></div>');
  
         //feEditAdvanced-contentWrapper feEditAdvanced-editButton editAction
         $('.news-edit-item').each(function( index ) {
