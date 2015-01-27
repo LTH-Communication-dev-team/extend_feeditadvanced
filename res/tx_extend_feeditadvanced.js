@@ -670,40 +670,37 @@ function urldecode(str) {
 }
 Ext.onReady(function() {
     /*Tar bort edit-wrap på själva pluginen*/
-    //if ($('div.feEditAdvanced-contentWrapper .tt_news_container').length) {
-        //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().prev().remove();
-    //}
-    //console.log(window.navigator);
-        var id = null;
-        //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
-        //$('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
-        //$('div.feEditAdvanced-contentWrapper .tt_news_container').wrap('<div class="feEditAdvanced-allWrapper"></div>');
- 
-        //feEditAdvanced-contentWrapper feEditAdvanced-editButton editAction
-        $('.news-edit-item').each(function( index ) {
-            //var contentWrapper = $(this).find('.feEditAdvanced-contentWrapper');
+    $('div.feEditAdvanced-contentWrapper .news-wrapper').parent().prev().hide();
+    var id = null;
+    //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
+    //$('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
+    //$('div.feEditAdvanced-contentWrapper .tt_news_container').wrap('<div class="feEditAdvanced-allWrapper"></div>');
 
-           var test = $(this).find('.feEditAdvanced-contentWrapper').parent();
-           id = $(this).find('.feEditAdvanced-contentWrapper').parent().attr('id');
-           var formContent = $(this).find('.feEditAdvanced-contentWrapper').prev();
-           $(this).find('.feEditAdvanced-contentWrapper').unwrap();
-           $(this).find('.feEditAdvanced-contentWrapper').replaceWith($(this).find('.feEditAdvanced-contentWrapper').html());
-           //test.remove();
-            //$(this).wrap('<div></div>');
-            $(this).wrap('<div class="feEditAdvanced-contentWrapper feEditAdvanced-editButton editAction"></div>');
-            $(this).parent().wrap(test);
-            $(this).parent().parent().prepend(formContent);
-            //console.log(id);
-            if(id) var myObject = new TYPO3.FeEdit.EditPanel(id);
-            //
-            //myObject.setupEventListeners();
-            //console.log($(this).attr('id'));
-            //$(this).wrap(this
-                    
-            //feEditAdvanced-allWrapper
-            //tmpId = $(this).attr('id');
-            //$(this).before('<a href="#" onclick="loadCategorySelector(\''+tmpId+'\');return false;">Share</a>');
-        });
+    //feEditAdvanced-contentWrapper feEditAdvanced-editButton editAction
+    $('.news-edit-item').each(function( index ) {
+        //var contentWrapper = $(this).find('.feEditAdvanced-contentWrapper');
+
+       var test = $(this).find('.feEditAdvanced-contentWrapper').parent();
+       id = $(this).find('.feEditAdvanced-contentWrapper').parent().attr('id');
+       var formContent = $(this).find('.feEditAdvanced-contentWrapper').prev();
+       $(this).find('.feEditAdvanced-contentWrapper').unwrap();
+       $(this).find('.feEditAdvanced-contentWrapper').replaceWith($(this).find('.feEditAdvanced-contentWrapper').html());
+       //test.remove();
+        //$(this).wrap('<div></div>');
+        $(this).wrap('<div class="feEditAdvanced-contentWrapper feEditAdvanced-editButton editAction"></div>');
+        $(this).parent().wrap(test);
+        $(this).parent().parent().prepend(formContent);
+        //console.log(id);
+        if(id) var myObject = new TYPO3.FeEdit.EditPanel(id);
+        //
+        //myObject.setupEventListeners();
+        //console.log($(this).attr('id'));
+        //$(this).wrap(this
+
+        //feEditAdvanced-allWrapper
+        //tmpId = $(this).attr('id');
+        //$(this).before('<a href="#" onclick="loadCategorySelector(\''+tmpId+'\');return false;">Share</a>');
+    });
         //$('.newswrapper').before('<a href="#" onclick="loadCategorySelector();return false;">Share</a>');
     //Show Insert news in menu
     if($('.tt_news_container').length) {
