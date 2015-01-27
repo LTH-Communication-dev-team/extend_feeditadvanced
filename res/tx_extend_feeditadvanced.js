@@ -671,6 +671,8 @@ function urldecode(str) {
 Ext.onReady(function() {
     /*Tar bort edit-wrap på själva pluginen*/
     $('div.feEditAdvanced-contentWrapper .news-horizontal').parent().prev().hide();
+    $('div.feEditAdvanced-contentWrapper .Tx-Formhandler').parent().prev().hide();
+    
     var id = null;
     //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
     //$('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
@@ -766,6 +768,10 @@ Ext.onReady(function() {
     }
 
     var beuser = $('#beuser').val();
+    
+    if($('.Tx-Formhandler').length) {
+        $('#formHandlerManagerMenu').show();
+    }
     
     fsMod = new fsModules();
     fsMod.navFrameHighlightedID["web"]=null;
