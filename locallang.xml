@@ -95,6 +95,7 @@
 			<label index="closeButton">Close</label>
                         
                         <label index="topLogoTooltip">Go to http://typo3.org</label>
+                        <label index="langsel">en</label>
                         
                         <label index="js.dropMessage">Drop content here</label>
 			<label index="js.loadingMessage">Loading editing form</label>
@@ -212,6 +213,7 @@
 			<label index="closeButton">Stäng</label>
                         
                         <label index="topLogoTooltip">Gå till http://typo3.org</label>
+                        <label index="langsel">sv</label>
                         
                         <label index="js.dropMessage">Släpp innehållet här</label>
 			<label index="js.loadingMessage">Loading editing form</label>
@@ -326,6 +328,7 @@
 			<label index="closeButton">Stäng</label>
                         
                         <label index="topLogoTooltip">Gå till http://typo3.org</label>
+                        <label index="langsel">sv</label>
                         
                         <label index="js.dropMessage">Släpp innehållet här</label>
 			<label index="js.loadingMessage">Loading editing form</label>

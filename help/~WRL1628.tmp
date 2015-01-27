@@ -12,21 +12,21 @@
 normal'>1. Inledning<o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>Gå till den webbplats som skall
-uppdateras. För att det ska fungera måste man logga in på den dom�n som man
+uppdateras. För att det ska fungera måste man logga in på den domän som man
 vill uppdatera (för att uppdatera www.biotek.lu.se måste man logga in på
 www.biotek.lu.se).</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal style='margin-left:18.0pt'>Klicka på �TYPO3-inloggning�
+<p class=MsoNormal style='margin-left:18.0pt'>Klicka på "TYPO3-inloggning"
 längst ner på sidan. Du kommer då till en inloggningssida där man loggar in med
 <span class=SpellE>lucat</span>-id och <span class=SpellE>password</span>. Om man
-är beh�rig s� kommer man att skickas tillbaka till den ursprungliga sidan. Det
+är behörig kommer man att skickas tillbaka till den ursprungliga sidan. Det
 finns en verktygsrad längst upp, och om man för musen över elementen för man </p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>upp redigeringsikonerna: ändra,
-Nytt, Kopiera, Klipp ut, G�m/visa och radera. Har man klippt ut eller kopierat
-ett innehållselement för man en �Klistra-in-ikon�.</p>
+Nytt, Kopiera, Klipp ut, Göm/visa och radera. Har man klippt ut eller kopierat
+ett innehållselement för man en "Klistra-in-ikon".</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
@@ -46,9 +46,9 @@ normal'>2.1 Redigera innehåll</b></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>För musen över det innehåll du
 vill redigera. Klicka på &quot;ändra&quot; i menyn som kommer upp. Du för upp
-ett redigeringsf�nster där du <span class=GramE>tex</span> kan ändra texten.
-Klicka på &quot;Spara� eller �Spara och stäng&quot; längst ner i
-redigeringsf�nstret för att spara. Klicka på &quot;Avbryt&quot; för att
+ett redigeringsfönster där du <span class=GramE>tex</span> kan ändra texten.
+Klicka på &quot;Spara" eller "Spara och stäng&quot; längst ner i
+redigeringsfönstret för att spara. Klicka på &quot;Avbryt&quot; för att
 avbryta.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
@@ -58,19 +58,19 @@ normal'>2.2 Skapa innehåll <o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>För musen över det innehåll där
 du vill ha det nya innehållselementet. Klicka på &quot;Nytt&quot; i menyn som
-kommer upp. Du för upp ett redigeringsf�nster där du <span class=GramE>tex</span>
-kan l�gga in text och bilder. Klicka på &quot;Spara� eller �Spara och stäng&quot;
+kommer upp. Du för upp ett redigeringsfönster där du <span class=GramE>tex</span>
+kan lägga in text och bilder. Klicka på &quot;Spara� eller �Spara och stäng&quot;
 längst ner i redigeringsf�nstret för att spara. Klicka på &quot;Avbryt&quot;
 för att avbryta.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal style='margin-left:18.0pt'>Du kan �ven välja �L�gg till nytt
+<p class=MsoNormal style='margin-left:18.0pt'>Du kan även välja �Lägg till nytt
 innehållselement� i menyn �ändra� i den svarta verktygsmenyn överst på sidan.
 då för du upp ytterligare en verktygsrad med de innehållselement du har
-beh�righet till. Ta tag i en av knapparna och dra den till sidan där du vill
-placera det. Det kommer upp gr�a rutor med texten �Sl�pp innehåll h�r� på de
-st�llen där du kan placera det nya innehållet. Ett redigeringsf�nster �ppnas
+behörighet till. Ta tag i en av knapparna och dra den till sidan där du vill
+placera det. Det kommer upp gråa rutor med texten �Släpp innehåll här� på de
+st�llen där du kan placera det nya innehållet. Ett redigeringsfönster �ppnas
 (se ovan).</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
@@ -100,24 +100,24 @@ in text i editorn.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal style='margin-left:18.0pt'>För att l�gga till en bild
+<p class=MsoNormal style='margin-left:18.0pt'>För att lägga till en bild
 klickar du på <span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Bild_x0020_16"
  o:spid="_x0000_i1027" type="#_x0000_t75" alt="insert3" style='width:11.25pt;
  height:11.25pt;visibility:visible;mso-wrap-style:square'>
  <v:imagedata src="typo3conf/ext/extend_feeditadvanced/help/res/image005.gif" o:title="insert3"/>
 </v:shape><![endif]--><![if !vml]><img width=15 height=15
 src="typo3conf/ext/extend_feeditadvanced/help/res/image005.gif" alt=insert3 v:shapes="Bild_x0020_16"><![endif]></span><span
-style='mso-spacerun:yes'>�</span>mappsymbolen bredvid f�ltet &quot;Bild&quot;.
-I f�nstret som kommer upp klickar du först på den mapp du vill h�mta bilder fr�n
+style='mso-spacerun:yes'>�</span>mappsymbolen bredvid fältet &quot;Bild&quot;.
+I fönstret som kommer upp klickar du först på den mapp du vill h�mta bilder fr�n
 och sedan på bilden.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal style='margin-left:18.0pt'>Vill l�gga till en bild v�ljer du
+<p class=MsoNormal style='margin-left:18.0pt'>Vill lägga till en bild v�ljer du
 först den mapp du vill ladda upp till, sedan klickar du på fliken &quot;Ladda
-uppå. Klicka på �Välj fil� och välj en bild på din h�rddisk, klick på
-&quot;Ladda upp filer&quot;. G� sedan tillbaka till fliken �Media� och välj den
-uppladdade bilden enligt ovan. (Du kan �ven klicka på det lilla plustecknet
+uppå. Klicka på �Välj fil� och välj en bild på din hårddisk, klick på
+&quot;Ladda upp filer&quot;. Gå sedan tillbaka till fliken �Media� och välj den
+uppladdade bilden enligt ovan. (Du kan även klicka på det lilla plustecknet
 bredvid den nyss uppladdade bilden och sedan st�nga <span class=SpellE>popup</span>-f�nstret.)</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
@@ -161,9 +161,9 @@ verktygsmenyn längst upp på sidan.</p>
 normal'>2.7 G�m innehåll<o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>För musen över det innehåll du
-vill g�mma. Klicka på &quot;G�m&quot; i menyn som kommer upp. Normalt visas
-inte g�mda innehållselement i Fe-<span class=SpellE>edit</span>-l�get. Vill du
-visa dessa måste du kryssa i �Visa g�mda innehållselement� i den svarta
+vill gömma. Klicka på &quot;Göm&quot; i menyn som kommer upp. Normalt visas
+inte gömda innehållselement i Fe-<span class=SpellE>edit</span>-l�get. Vill du
+visa dessa måste du kryssa i �Visa gömda innehållselement� i den svarta
 verktygsmenyn längst upp på sidan.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
@@ -171,10 +171,10 @@ verktygsmenyn längst upp på sidan.</p>
 <p class=MsoNormal style='margin-left:18.0pt'><b style='mso-bidi-font-weight:
 normal'>2.8 Visa g�mt innehåll<o:p></o:p></b></p>
 
-<p class=MsoNormal style='margin-left:18.0pt'>Normalt visas inte g�mda
+<p class=MsoNormal style='margin-left:18.0pt'>Normalt visas inte gömda
 innehållselement i Fe-<span class=SpellE>edit</span>-l�get. Vill du visa dessa
-måste du kryssa i �Visa g�mda innehållselement� i den svarta verktygsmenyn
-längst upp på sidan. De dyker då upp �<span class=SpellE>gr�ade</span>� på
+måste du kryssa i �Visa gömda innehållselement� i den svarta verktygsmenyn
+längst upp på sidan. De dyker då upp �<span class=SpellE>gråade</span>� på
 sidan. För musen över det innehåll du vill visa. Klicka på &quot;Visa&quot; i
 menyn som kommer upp. Innehållet visas nu som vanligt.</p>
 
@@ -213,7 +213,7 @@ exactly'><o:p>&nbsp;</o:p></p>
 <p class=MsoNormal style='margin-left:17.85pt'>I redigeringsf�nstret kontrollerar
 du att rutan &quot;Inaktivera&quot; under �Synbarhet� inte är ikryssad. Fyll i
 en sidtitel. Använd bara a-ö, <span class=GramE>_ ,</span>- och 0-9. Om du vill
-ha en l�ngre &quot;brun rubrik&quot; på sidan s� fyller du i f�ltet
+ha en l�ngre &quot;brun rubrik&quot; på sidan fyller du i f�ltet
 &quot;Underrubrik&quot;. Vill du ha en annan rubrik i menyerna fyller du i
 �Alternativ navigationstitel�. (Det är sidtiteln som avg�r vilken <span
 class=SpellE>url</span> som sidan kommer att f�.)</p>
@@ -232,12 +232,12 @@ normal'>3.3 Sidans egenskaper<o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:17.85pt'>Välj &quot;ändra sidans
 egenskaper&quot; i menyn �ändra� i den svarta verktygsmenyn längst upp på
-sidan. I n�sta f�nster klickar du på en gr� pil där du vill placera sidan.</p>
+sidan. I nästa fönster klickar du på en grå pil där du vill placera sidan.</p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>I redigeringsf�nstret kan du g�ra
-samma �ndringar som i avsnitt 3.1 �Skapa ny sida� ovan.</p>
+samma ändringar som i avsnitt 3.1 �Skapa ny sida� ovan.</p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
 
@@ -245,13 +245,13 @@ samma �ndringar som i avsnitt 3.1 �Skapa ny sida� ovan.</p>
 normal'>3.4 Flytta sidan<o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:17.85pt'>Välj &quot;Flytta sidan&quot; i
-menyn �ändra� i den svarta verktygsmenyn längst upp på sidan. I n�sta f�nster
-klickar du på en gr� pil där du vill placera sidan.</p>
+menyn �ändra� i den svarta verktygsmenyn längst upp på sidan. I nästa fönster
+klickar du på en grå pil där du vill placera sidan.</p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
 
-<p class=MsoNormal style='margin-left:17.85pt'>Om du �ngrar dig s� klickar du
-på den lilla �returknappen� h�gst upp på sidan.</p>
+<p class=MsoNormal style='margin-left:17.85pt'>Om du ångrar dig klickar du
+på den lilla �returknappen� högst upp på sidan.</p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
 
@@ -259,13 +259,13 @@ på den lilla �returknappen� h�gst upp på sidan.</p>
 normal'>3.5 Kopiera sidan<o:p></o:p></b></p>
 
 <p class=MsoNormal style='margin-left:17.85pt'>Välj &quot;Kopiera sidan&quot; i
-menyn �ändra� i den svarta verktygsmenyn längst upp på sidan. I n�sta f�nster
-klickar du på en gr� pil där du vill placera den kopierade sidan.</p>
+menyn �ändra� i den svarta verktygsmenyn längst upp på sidan. I nästa fönster
+klickar du på en grå pil där du vill placera den kopierade sidan.</p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal style='margin-left:17.85pt'>Om du �ngrar dig s� klickar du
-på den lilla �returknappen� h�gst upp på sidan.</p>
+på den lilla �returknappen� högst upp på sidan.</p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
 
@@ -373,7 +373,7 @@ normal'>4.4 Typo3-backend<o:p></o:p></b></p>
 <p class=MsoNormal style='margin-left:17.85pt'>Välj &quot;�ppna
 Typo3-backend&quot; i menyn under ditt anv�ndarnamn i den svarta verktygsmenyn längst
 upp på sidan (se ovan). Du skickas nu till Typo3s &quot;stora&quot;
-administrationsgr�nssnitt. Mer information om hur man hanterar det finns i LTHs
+administrationsgrånssnitt. Mer information om hur man hanterar det finns i LTHs
 stora Typo3-manual (se nedan). </p>
 
 <p class=MsoNormal style='margin-left:17.85pt'><o:p>&nbsp;</o:p></p>
@@ -434,7 +434,7 @@ i verktygsraden. Det finns fyra olika slags länkar: Sida, Fil, Yttre web-adress
 man den sida man vill l�nka till i sidtr�det som kommer upp n�r man klickar på
 fliken &quot;Sida&quot;. OBS! detta fungerar bara inom en dom�n. Om man <span
 class=GramE>tex.</span> Skulle ha beh�righet till b�de www.biotek.lu.se och
-www.immun.lth.se s� kommer b�da sidtr�den upp men man förs�ker l�nka till en
+www.immun.lth.se kommer b�da sidtr�den upp men man förs�ker l�nka till en
 sida i den andra dom�nen s� kommer resultatet att bli ett 404-fel n�r bes�karen
 förs�ker klicka på l�nken.</p>
 
@@ -443,20 +443,20 @@ förs�ker klicka på l�nken.</p>
 <p class=MsoNormal style='margin-left:18.0pt'>För att l�nka till en fil v�ljer
 man den fil man vill l�nka till i filtr�det som kommer upp n�r man klickar på
 fliken &quot;Fil&quot;. Om man länkar till en fil s� kan det vara en bra id�
-att välja &quot;Nytt f�nster&quot; som m�l i rullisten längst ner i f�nstret.</p>
+att välja &quot;Nytt fönster&quot; som m�l i rullisten längst ner i f�nstret.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>För att l�nka till en yttre
-webbadress <span class=GramE>tex.</span> www.mah.se s� fyller man i adressen
-f�ltet &quot;URL:&quot; som kommer upp n�r man klickar på fliken &quot;Yttre
+webbadress <span class=GramE>tex.</span> www.mah.se fyller man i adressen
+f�ltet &quot;URL:&quot; som kommer upp när man klickar på fliken &quot;Yttre
 web-adress (URL)&quot;.</p>
 
 <p class=MsoNormal style='margin-left:18.0pt'><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal style='margin-left:18.0pt'>För att l�nka till en <span
 class=SpellE>epostadress</span> <span class=GramE>tex.</span>
-mailto:webmaster@lth.se s� fyller man i <span class=SpellE>epostadressen</span>
+mailto:webmaster@lth.se fyller man i <span class=SpellE>epostadressen</span>
 f�ltet &quot;E-post adress:&quot; som kommer upp n�r man klickar på fliken
 &quot;Epost&quot;. Klicka sedan på &quot;S�tt l�nk&quot;.</p>
 

@@ -455,11 +455,14 @@ function userSettings()
     //toggleItem('.feEditAdvanced-userItemsMenu');
 }
 
-function loadHelp()
+function loadHelp(lang)
 {
+    if(!lang) {
+        lang='sv';
+    }
     //$('.feEditAdvanced-secondRow').hide();
     //showAjaxLoadingIcon();
-    var url = '/typo3conf/ext/extend_feeditadvanced/help/index.php?lang='+$('#beuser_lang').val();
+    var url = '/typo3conf/ext/extend_feeditadvanced/help/index_'+lang+'.php?lang='+$('#beuser_lang').val();
     /*var headerText = resources.helpHeader+'<span onclick="closeIframe();return false;" class="fancybox-close"></span><span onclick="loadHelp();return false;" class="help-button">';
     var height = TYPO3.configuration.feeditadvanced.editWindow.height ? parseInt(TYPO3.configuration.feeditadvanced.editWindow.height) : 600;
     var width = TYPO3.configuration.feeditadvanced.editWindow.width ? parseInt(TYPO3.configuration.feeditadvanced.editWindow.width) : 800;
@@ -469,9 +472,11 @@ function loadHelp()
     .dialog({
             autoOpen: false,
             title: resources.helpHeader,
-            width: 700,
+            width: 740,
             height: 700,
-            resizable: true
+            resizable: false,
+            show: 'slideDown',
+            hide: 'slideUp'
     });
     $dialog.dialog('open');
 }
@@ -771,6 +776,8 @@ Ext.onReady(function() {
     
     if($('.Tx-Formhandler').length) {
         $('#formHandlerManagerMenu').show();
+    } else {
+        $('#formHandlerManagerMenu').hide();
     }
     
     fsMod = new fsModules();
