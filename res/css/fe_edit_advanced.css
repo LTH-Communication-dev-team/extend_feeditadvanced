@@ -934,7 +934,7 @@ div.feEditAdvanced-contentWrapperSmall .start-grid-8 {
     display: none;
 }
 
-.ui-dialog { z-index: 13000 !important ;}
+.ui-dialog { z-index: 19000 !important ;}
 
 /********************************************** JQUERY DIALOG **********************************/
 /*.ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, .foo, .ui-draggable, .ui-resizable {background:#cccccc !important}​*/
