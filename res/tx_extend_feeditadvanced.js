@@ -670,7 +670,7 @@ function urldecode(str) {
 }
 Ext.onReady(function() {
     /*Tar bort edit-wrap på själva pluginen*/
-    $('div.feEditAdvanced-contentWrapper .news-wrapper').parent().prev().hide();
+    $('div.feEditAdvanced-contentWrapper .news-horizontal').parent().prev().hide();
     var id = null;
     //$('div.feEditAdvanced-contentWrapper .tt_news_container').parent().unwrap();
     //$('div.feEditAdvanced-contentWrapper .tt_news_container').unwrap();
